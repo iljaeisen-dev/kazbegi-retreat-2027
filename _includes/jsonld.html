@@ -1,5 +1,5 @@
 {%- comment -%} Разметка для поисковиков: событие, место, цена, ссылка на анкету {%- endcomment -%}
-{%- assign jl_tier = R.pricing.tiers | last -%}
+{%- assign jl_today = site.time | date: "%Y-%m-%d" -%}{%- assign jl_tier = R.pricing.tiers | last -%}{%- for t in R.pricing.tiers -%}{%- if t.until and t.until >= jl_today -%}{%- assign jl_tier = t -%}{%- break -%}{%- endif -%}{%- endfor -%}
 {%- if jl_tier -%}{%- assign jl_price = jl_tier.price -%}{%- else -%}{%- assign jl_price = 0 -%}{%- for p in R.pricing.parts -%}{%- assign jl_price = jl_price | plus: p.price -%}{%- endfor -%}{%- endif -%}
 <script type="application/ld+json">
   [{

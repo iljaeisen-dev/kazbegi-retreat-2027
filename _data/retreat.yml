@@ -17,13 +17,13 @@
 # =============================================================================
 
 site:
-  url: "https://timurumarov1984-afk.github.io/kazbegi-retreat-2027/"   # полный адрес сайта, со слешем в конце — нужен для превью ссылки
+  url: "https://iljaeisen-dev.github.io/kazbegi-retreat-2027/"   # полный адрес сайта, со слешем в конце — нужен для превью ссылки
   draft: true                  # true — черновик: поисковики сайт не видят, в углу пометка «Черновик для согласования»
   brand:
     name: "Master’s Retreat"
     sub: "Kazbegi · Georgia · 2027"
   email: "kazbegi.retreat@gmail.com"
-  telegram: "heresteam"        # без @
+  telegram: "Kazbegi_Retreat_bot"        # без @
   rules_url: "https://docs.google.com/document/d/1uhkTW_Wl2Kt01I_s67hevnbW48xrJMRSRxvOOjTfRWY/preview"
   method_url: ""               # сайт о методе Мастера; пусто — ссылок на него нет
   analytics:
@@ -168,9 +168,9 @@ practices:                     # каталог карточек; lead — кт�
     text: { ru: "Каждый день — классический массаж всего тела и зонально.", en: "Every day — classic full-body and targeted massage." }
     lead:
       name: { ru: "Павел", en: "Pavel" }
-      about:                   # текст из Telegram пришлют организаторы
-        ru: "Работа с внутренними органами, мышцами, тканями, связками, сухожилиями и внутренними цепями. Техники настроены на разблокировку систем, восстановление кровотока, иннервации тканей и течения энергий."
-        en: "Work with the internal organs, muscles, tissues, ligaments, tendons and inner chains. The techniques unblock the body’s systems and restore circulation, the innervation of tissues and the flow of energy."
+      about:
+        ru: "На протяжении всего ретрита у вас будет возможность записаться на приём к специалисту по массажу и правкам тела. Павел Козлов — сертифицированный инструктор йоги, натуропрактик, целитель, автор и ведущий курсов по оздоровлению тела, ведущий практик по гонг-медитациям, проводник по гвоздестоянию. Направления: работа с внутренними органами (правка живота, висцеральный массаж); работа с мышцами, тканями, связками, сухожилиями и внутренними цепями (вакуумный массаж и вакуумная техника правки тела, суставная правка всего тела, ударно-вибрационная техника «Лад тела» петлями-нагайками); энергетические практики и очищение каналов (целение в тишине); классический расслабляющий массаж всего тела и зонально. Техники настроены на разблокировку систем, восстановление кровотока, иннервации тканей, течение энергий."
+        en: "Throughout the retreat you can book a session with a specialist in massage and body alignment. Pavel Kozlov is a certified yoga instructor, naturopath and healer, author and leader of body-wellness courses, gong-meditation practitioner and guide to standing on nails. Areas: work with the internal organs (abdominal alignment, visceral massage); muscles, tissues, ligaments, tendons and inner chains (vacuum massage and vacuum body alignment, whole-body joint alignment, percussion-vibration technique); energy practices and channel cleansing (healing in silence); classic relaxing full-body and targeted massage."
     art: { name: "massage", ka: "მასაჟი" }
   fire:
     title: { ru: "Вечерние костры", en: "Evening bonfires" }
@@ -256,7 +256,7 @@ venue:
   place: { ru: "Степанцминда, Грузия", en: "Stepantsminda, Georgia" }
   address: "1 V. Gorgasali St, Stepantsminda 4701, Georgia"
   geo: { lat: 42.6589, lng: 44.6508 }
-  website: "https://roomshotels.com/hotel/kazbegi/"
+  website: "https://roomshotels.com/locations/kazbegi"
   website_label: { ru: "Сайт Rooms Kazbegi", en: "Rooms Kazbegi website" }
   kicker: { ru: "Место", en: "The venue" }
   title: { ru: "Rooms Kazbegi — *у подножия Казбека*", en: "Rooms Kazbegi — *at the foot of Kazbek*" }
@@ -297,7 +297,7 @@ rooms:
       text: { ru: "По цене группы: укажите в анкете категорию номера и даты — мы закрепим номер за вами.", en: "At the group rate: give the room category and dates in the application and we’ll hold the room for you." }
     - title: { ru: "В Rooms самостоятельно", en: "At Rooms, on your own" }
       text: { ru: "Бронь напрямую на сайте отеля — по его обычным ценам.", en: "Book directly on the hotel’s website, at its regular rates." }
-      url: "https://roomshotels.com/hotel/kazbegi/"
+      url: "https://roomshotels.com/locations/kazbegi"
     - title: { ru: "В любом другом месте", en: "Anywhere else" }
       text: { ru: "В гостевом доме или отеле рядом — и приходить на практики и общие активности.", en: "At a guesthouse or hotel nearby — and come for the sessions and shared activities." }
   currency: "$"
@@ -307,7 +307,7 @@ rooms:
     - name: "Standard"
       type: { ru: "King или Twin", en: "King or Twin" }
       text: { ru: "Уютный номер с видом на лес или на горы.", en: "A cosy room facing the forest or the mountains." }
-      url: ""
+      url: "https://roomshotels.com/locations/kazbegi#rooms"
       photo: { src: "room-standard.webp", alt: { ru: "Номер Standard", en: "Standard room" } }
       variants:
         - { name: { ru: "King · вид на лес", en: "King · forest view" }, single: 160, double: 180 }
@@ -316,7 +316,7 @@ rooms:
     - name: "Executive"
       type: { ru: "для долгого проживания", en: "made for longer stays" }
       text: { ru: "Просторнее, ванная из натурального дерева с тропическим душем.", en: "More spacious, with a natural-wood bathroom and a rainfall shower." }
-      url: ""
+      url: "https://roomshotels.com/locations/kazbegi#rooms"
       photo: { src: "room-executive.webp", alt: { ru: "Номер Executive", en: "Executive room" } }
       variants:
         - { name: { ru: "King · вид на лес", en: "King · forest view" }, single: 195, double: 215 }
@@ -324,7 +324,7 @@ rooms:
     - name: "Signature"
       type: { ru: "просторный, с ванной", en: "spacious, with a bathtub" }
       text: { ru: "Большой номер с ванной и видом с террасы.", en: "A large room with a bathtub and a terrace view." }
-      url: ""
+      url: "https://roomshotels.com/locations/kazbegi#rooms"
       photo: { src: "room-signature.webp", alt: { ru: "Номер Signature", en: "Signature room" } }
       variants:
         - { name: { ru: "King · вид на лес", en: "King · forest view" }, single: 290, double: 310 }
@@ -354,14 +354,19 @@ activities:
   kicker: { ru: "Досуг", en: "Leisure" }
   title: { ru: "Горы, кухня *и простор*", en: "Mountains, food *and open space*" }
   lead:
-    ru: "Примеры дополнительных активностей за отдельную плату. Их организуют отель или местные турагентства — на месте вариантов будет гораздо больше."
+    ru: "Примеры дополнительных активностей и поездок за отдельную плату. На поездки едем на джипах до 6 человек, стоимость делится, гид и перекус включены. Их организуют отель или местные турагентства — на месте вариантов будет гораздо больше."
     en: "Examples of optional activities, paid separately. They are run by the hotel or local agencies — there will be many more options on site."
   items:
     - { photo: "strip-2.webp", title: { ru: "Пешие прогулки", en: "Hiking" }, text: { ru: "С проводником от отеля или самостоятельно — например, к церкви Гергети над посёлком.", en: "With a hotel guide or on your own — for example, up to Gergeti Church above the village." } }
     - { photo: "cooking.webp", title: { ru: "Кулинарные мастер-классы", en: "Cooking classes" }, text: { ru: "Приготовим хинкали или хачапури.", en: "We’ll make khinkali or khachapuri." } }
     - { photo: "strip-3.webp", pos: "50% 75%", title: { ru: "Верховая езда", en: "Horse riding" }, text: { ru: "С гидом от отеля — в первозданные природные места.", en: "With a hotel guide — into untouched nature." } }
-    - { photo: "spa.webp", title: { ru: "Спа", en: "Spa" }, text: { ru: "Бассейн, сауны и процедуры в отеле с невероятными видами.", en: "A pool, saunas and treatments at the hotel, with incredible views." } }
+    - { photo: "spa.webp", title: { ru: "Спа", en: "Spa" }, text: { ru: "Подогреваемый крытый бассейн, сауна, уличная купель, фитнес-зал и массажный кабинет (по записи) — с невероятными видами.", en: "A heated indoor pool, a sauna, an outdoor plunge pool, a gym and a massage room (by appointment) — with incredible views." } }
     - { photo: "offroad.webp", title: { ru: "Офф-роуд", en: "Off-road" }, text: { ru: "По труднодоступным и самым красивым местам.", en: "To the remotest and most beautiful places." } }
+    - { photo: "strip-1.webp", title: { ru: "Гергети и водопады Гвелети", en: "Gergeti and the Gveleti waterfalls" }, text: { ru: "Церковь XIV века у подножия Казбека и каскад водопадов в ущелье — в водопаде можно искупаться.", en: "A 14th-century church at the foot of Kazbek and a cascade of waterfalls in the gorge — you can swim under the falls." } }
+    - { photo: "strip-4.webp", title: { ru: "Сно, Джута и Чаухи", en: "Sno, Juta and Chaukhi" }, text: { ru: "Каменные скульптуры в Сно, острые пики Чаухи, зелёные луга Джуты — маршрут, который «должен увидеть каждый». ≈30 минут на машине от отеля.", en: "Stone sculptures in Sno, the sharp peaks of Chaukhi and the green meadows of Juta — the route “everyone should see”. About 30 minutes by car." } }
+    - { photo: "strip-5.webp", title: { ru: "Ущелье Трусо", en: "Truso Gorge" }, text: { ru: "Долина Терека, ледники, минеральные источники и альпийские луга. Грунтовая дорога — едем на внедорожниках, связи в долине нет.", en: "The Terek valley, glaciers, mineral springs and alpine meadows. A dirt road — we go by 4×4; there is no mobile signal in the valley." } }
+    - { photo: "strip-6.webp", title: { ru: "Церковь Святого Ильи", en: "St Elijah’s Church" }, text: { ru: "Около часа верхом через сосновый лес или пешком прямо от отеля — вид на ледник Казбеги, медитация и пикник.", en: "About an hour on horseback through the pine forest, or on foot straight from the hotel — a view of the Kazbegi glacier, meditation and a picnic." } }
+    - { photo: "pool.webp", title: { ru: "Нарзановый источник", en: "Narzan spring" }, text: { ru: "В 3,5 км от отеля — чаша с газированной минеральной водой, в ней купаются. Возьмите купальник и пустую бутылку.", en: "3.5 km from the hotel — a pool of sparkling mineral water you can swim in. Bring a swimsuit and an empty bottle." } }
     - { photo: "master-session.webp", pos: "62% 30%", title: { ru: "Частное занятие с Мастером", en: "Private session with the Master" }, text: { ru: "При наличии времени и возможности, по предварительной договорённости: {private}.", en: "When time allows, by appointment: {private}." } }
 
 # ----------------------------------------------------------------------------- сотворчество
@@ -530,7 +535,7 @@ faq:
       - q: { ru: "Как забронировать номер или изменить бронь?", en: "How do I book a room or change a booking?" }
         a: { ru: "Через организаторов: укажите в анкете, что хотите жить в Rooms, категорию номера и даты — мы закрепим за вами номер по цене группы. Оплачиваете проживание напрямую отелю при заезде. Изменения брони — тоже через нас.", en: "Through the organisers: in the application, say you’d like to stay at Rooms and give the room category and dates — we hold the room for you at the group rate. You pay for your stay directly to the hotel at check-in. Changes to the booking also go through us." }
       - q: { ru: "Где посмотреть все фото номеров?", en: "Where can I see all the room photos?" }
-        a: { ru: "Полная подборка — [в этой папке](https://drive.google.com/drive/folders/177Qdydk48egib21E2DL-T3Oa7qNrJIGa?usp=sharing), а описания номеров — на [сайте отеля](https://roomshotels.com/hotel/kazbegi/).", en: "The full set is [in this folder](https://drive.google.com/drive/folders/177Qdydk48egib21E2DL-T3Oa7qNrJIGa?usp=sharing), and the room descriptions are on the [hotel website](https://roomshotels.com/hotel/kazbegi/)." }
+        a: { ru: "Полная подборка — [в этой папке](https://drive.google.com/drive/folders/177Qdydk48egib21E2DL-T3Oa7qNrJIGa?usp=sharing), а описания номеров — на [сайте отеля](https://roomshotels.com/locations/kazbegi).", en: "The full set is [in this folder](https://drive.google.com/drive/folders/177Qdydk48egib21E2DL-T3Oa7qNrJIGa?usp=sharing), and the room descriptions are on the [hotel website](https://roomshotels.com/locations/kazbegi)." }
       - q: { ru: "Сколько стоит проживание?", en: "How much is accommodation?" }
         a: { ru: "От {rooms_from} $ за номер за ночь плюс НДС 18%, завтрак включён. Все цены — на странице [«Проживание»](stay.html). Оплата — напрямую отелю при заезде.", en: "From ${rooms_from} per room per night plus 18% VAT, breakfast included. All prices are on the [Accommodation](stay.html) page. You pay the hotel directly at check-in." }
       - q: { ru: "Завтрак включён?", en: "Is breakfast included?" }
