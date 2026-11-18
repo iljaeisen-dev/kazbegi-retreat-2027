@@ -22,14 +22,14 @@
           <picture class="hero__slide{% if forloop.first %} is-active{% endif %}">
             {%- if forloop.first %}
             {%- if p.m %}
-            <source media="(max-aspect-ratio: 4/5)" srcset="assets/img/{{ p.m }}">
+            <source media="(max-aspect-ratio: 4/5)" srcset="assets/img/{{ p.m }}?v={{ site.time | date: "%s" }}">
             {%- endif %}
-            <img src="assets/img/{{ p.src }}" alt="" fetchpriority="high"{% if p.pos %} style="object-position:{{ p.pos }}"{% endif %}>
+            <img src="assets/img/{{ p.src }}?v={{ site.time | date: "%s" }}" alt="" fetchpriority="high"{% if p.pos %} style="object-position:{{ p.pos }}"{% endif %}>
             {%- else %}
             {%- if p.m %}
-            <source media="(max-aspect-ratio: 4/5)" data-srcset="assets/img/{{ p.m }}">
+            <source media="(max-aspect-ratio: 4/5)" data-srcset="assets/img/{{ p.m }}?v={{ site.time | date: "%s" }}">
             {%- endif %}
-            <img data-srcset="assets/img/{{ p.src }}" alt=""{% if p.pos %} style="object-position:{{ p.pos }}"{% endif %}>
+            <img data-srcset="assets/img/{{ p.src }}?v={{ site.time | date: "%s" }}" alt=""{% if p.pos %} style="object-position:{{ p.pos }}"{% endif %}>
             {%- endif %}
           </picture>
           {%- endfor %}

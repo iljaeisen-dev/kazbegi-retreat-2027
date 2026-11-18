@@ -5,7 +5,7 @@
               <p class="day__label"><span lang="ru">День {{ forloop.index }}</span><span lang="en">Day {{ forloop.index }}</span></p>
               <h3 class="day__date"><span lang="ru">{% include fmt-date.html d=d.date lang="ru" %}</span><span lang="en">{% include fmt-date.html d=d.date lang="en" %}</span></h3>
               <p class="day__hours">{% include t.html v=d.hours %}</p>
-              <p class="day__time">{% if d.time and d.time != "" %}{{ d.time }}{% else %}<span lang="ru">часы уточняются</span><span lang="en">hours tbc</span>{% endif %}</p>
+              <p class="day__time">{% if d.time and d.time != "" %}{{ d.time }}{% else %}<span lang="ru">время нужно решить с&nbsp;Мастером</span><span lang="en">time to be decided with the Master</span>{% endif %}</p>
             </article>
             {%- endfor %}
             <article class="day day--int day--out">

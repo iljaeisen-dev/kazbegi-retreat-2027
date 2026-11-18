@@ -11,9 +11,9 @@
       {%- else %}
       <picture>
         {%- if F.photo.m %}
-        <source media="(max-aspect-ratio: 4/5)" srcset="assets/img/{{ F.photo.m }}">
+        <source media="(max-aspect-ratio: 4/5)" srcset="assets/img/{{ F.photo.m }}?v={{ site.time | date: "%s" }}">
         {%- endif %}
-        <img src="assets/img/{{ F.photo.src }}" loading="lazy" alt=""{% if F.photo.pos %} style="object-position:{{ F.photo.pos }}"{% endif %}>
+        <img src="assets/img/{{ F.photo.src }}?v={{ site.time | date: "%s" }}" loading="lazy" alt=""{% if F.photo.pos %} style="object-position:{{ F.photo.pos }}"{% endif %}>
       </picture>
       {%- endif %}
       <div class="container">

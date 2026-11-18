@@ -36,8 +36,8 @@ name_en: Application
 
       <div class="form-state form-state--success" hidden>
         <div class="form-state__icon"><svg aria-hidden="true"><use href="#i-check"/></svg></div>
-        <h2><span lang="ru">Спасибо, заявка получена!</span><span lang="en">Thank you, your application is in!</span></h2>
-        <p><span lang="ru">Очень рады тебе! Вот что будет дальше:</span><span lang="en">We’re so glad you’re here! Here’s what happens next:</span></p>
+        <h2><span lang="ru">Спасибо, заявка получена</span><span lang="en">Thank you, your application has been received</span></h2>
+        <p><span lang="ru">Благодарим за заявку. Что будет дальше:</span><span lang="en">Thank you for applying. Here’s what happens next:</span></p>
         <ol class="next-steps">
           {%- for s in R.join.steps offset: 2 %}
           <li><b>{% include t.html v=s.title %}</b><span>{% include t.html v=s.text %}</span></li>
@@ -58,7 +58,7 @@ name_en: Application
 
       <div class="form-state form-state--error" hidden>
         <h2><span lang="ru">Не получилось отправить</span><span lang="en">Couldn’t send the form</span></h2>
-        <p lang="ru">Ответы сохранились — попробуй ещё раз через минуту. Если не выходит, напиши нам{% if g_telegram != "" %} в&nbsp;Telegram <a href="https://t.me/{{ R.site.telegram }}" target="_blank" rel="noopener">{{ g_telegram }}</a>{% endif %}{% if g_email != "" %} или на&nbsp;<a href="mailto:{{ g_email }}">{{ g_email }}</a>{% endif %}, или заполни <a href="{{ raw_form }}" target="_blank" rel="noopener">Google-форму</a>.</p>
+        <p lang="ru">Ответы сохранились — попробуйте ещё раз через минуту. Если не получится, напишите нам{% if g_telegram != "" %} в&nbsp;Telegram <a href="https://t.me/{{ R.site.telegram }}" target="_blank" rel="noopener">{{ g_telegram }}</a>{% endif %}{% if g_email != "" %} или на&nbsp;<a href="mailto:{{ g_email }}">{{ g_email }}</a>{% endif %}, или заполни <a href="{{ raw_form }}" target="_blank" rel="noopener">Google-форму</a>.</p>
         <p lang="en">Your answers are saved — please try again in a minute. If it still fails, write to us{% if g_telegram != "" %} on Telegram <a href="https://t.me/{{ R.site.telegram }}" target="_blank" rel="noopener">{{ g_telegram }}</a>{% endif %}{% if g_email != "" %} or at <a href="mailto:{{ g_email }}">{{ g_email }}</a>{% endif %}, or use the <a href="{{ raw_form }}" target="_blank" rel="noopener">Google Form</a>.</p>
         <button class="btn" type="button" data-retry>
           <span lang="ru">Попробовать ещё раз</span><span lang="en">Try again</span>

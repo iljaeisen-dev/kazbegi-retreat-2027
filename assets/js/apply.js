@@ -20,9 +20,9 @@
   var PRESETS = FORM.presets || {};
 
   var MSG = {
-    required: { ru: 'Заполни, пожалуйста, это поле', en: 'Please fill this in' },
+    required: { ru: 'Пожалуйста, заполните это поле', en: 'Please fill this in' },
     choose: { ru: 'Выбери вариант', en: 'Please choose an option' },
-    email: { ru: 'Проверь адрес почты', en: 'Please check the email address' },
+    email: { ru: 'Проверьте адрес почты', en: 'Please check the email address' },
     dates: { ru: 'Дата отъезда раньше даты приезда', en: 'Departure is before arrival' },
     other: { ru: 'Напиши свой вариант', en: 'Please describe your option' },
     consent: { ru: 'Нужно принять условия участия', en: 'Please accept the terms' }

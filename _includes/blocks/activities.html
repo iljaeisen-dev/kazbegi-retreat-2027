@@ -15,7 +15,7 @@
           {%- for a in Ac.items %}
           {%- assign ad = forloop.index0 | modulo: 3 %}
           <article class="act reveal"{% if ad > 0 %} data-delay="{{ ad }}"{% endif %}>
-            <img src="assets/img/{{ a.photo }}" loading="lazy" alt=""{% if a.pos %} style="object-position:{{ a.pos }}"{% endif %}>
+            <img src="assets/img/{{ a.photo }}?v={{ site.time | date: "%s" }}" loading="lazy" alt=""{% if a.pos %} style="object-position:{{ a.pos }}"{% endif %}>
             <div class="act__body">
               <h3>{% include t.html v=a.title %}</h3>
               <p>{% include t.html v=a.text %}</p>

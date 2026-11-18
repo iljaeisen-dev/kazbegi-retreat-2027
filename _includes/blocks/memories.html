@@ -14,13 +14,13 @@
 
         <div class="mosaic">
           {%- for p in M.photos limit: 5 %}
-          <button class="mosaic__item mosaic__item--{{ mem_slots[forloop.index0] }} reveal" type="button" data-full="assets/img/{{ p.src }}">{% include img.html p=p %}</button>
+          <button class="mosaic__item mosaic__item--{{ mem_slots[forloop.index0] }} reveal" type="button" data-full="assets/img/{{ p.src }}?v={{ site.time | date: "%s" }}">{% include img.html p=p %}</button>
           {%- endfor %}
         </div>
 
         <div class="memories__foot reveal">
           {%- if M.video and M.video != "" %}
-          <button class="btn btn--outline memories__video" type="button" data-video="assets/video/{{ M.video }}"{% if M.video_poster %} data-poster="assets/img/{{ M.video_poster }}"{% endif %}>
+          <button class="btn btn--outline memories__video" type="button" data-video="assets/video/{{ M.video }}"{% if M.video_poster %} data-poster="assets/img/{{ M.video_poster }}?v={{ site.time | date: "%s" }}"{% endif %}>
             <svg aria-hidden="true"><use href="#i-play"/></svg>
             <span lang="ru">Смотреть видео</span><span lang="en">Watch the video</span>
           </button>
@@ -28,7 +28,7 @@
           <span></span>
           {%- endif %}
           <a class="btn" href="apply.html">
-            <span lang="ru">Хочу на&nbsp;ретрит</span><span lang="en">I want to join</span>
+            <span lang="ru">Подать заявку</span><span lang="en">Apply</span>
             <svg aria-hidden="true"><use href="#i-arrow"/></svg>
           </a>
         </div>

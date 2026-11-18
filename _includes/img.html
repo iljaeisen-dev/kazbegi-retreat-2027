@@ -9,4 +9,4 @@
 {%- else -%}
   {%- assign i_alt = i_p.alt | default: "" -%}{%- assign i_alt_en = "" -%}
 {%- endif -%}
-<img src="assets/img/{{ i_src }}"{% if i_p.w %} width="{{ i_p.w }}" height="{{ i_p.h }}"{% endif %}{% unless include.lazy == "n" %} loading="lazy"{% endunless %}{% if include.priority == "y" %} fetchpriority="high"{% endif %} alt="{{ i_alt | escape }}"{% if i_alt_en != "" %} data-alt-en="{{ i_alt_en | escape }}"{% endif %}{% if i_p.pos %} style="object-position:{{ i_p.pos }}"{% endif %}{% if include.cls %} class="{{ include.cls }}"{% endif %}>
+<img src="assets/img/{{ i_src }}?v={{ site.time | date: "%s" }}"{% if i_p.w %} width="{{ i_p.w }}" height="{{ i_p.h }}"{% endif %}{% unless include.lazy == "n" %} loading="lazy"{% endunless %}{% if include.priority == "y" %} fetchpriority="high"{% endif %} alt="{{ i_alt | escape }}"{% if i_alt_en != "" %} data-alt-en="{{ i_alt_en | escape }}"{% endif %}{% if i_p.pos %} style="object-position:{{ i_p.pos }}"{% endif %}{% if include.cls %} class="{{ include.cls }}"{% endif %}>

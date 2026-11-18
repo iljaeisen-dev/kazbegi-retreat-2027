@@ -23,7 +23,7 @@ site:
     name: "Master’s Retreat"
     sub: "Kazbegi · Georgia · 2027"
   email: "kazbegi.retreat@gmail.com"
-  telegram: "heresteam"        # без @
+  telegram: "Kazbegi_Retreat_bot"        # без @
   rules_url: "https://docs.google.com/document/d/1uhkTW_Wl2Kt01I_s67hevnbW48xrJMRSRxvOOjTfRWY/preview"
   method_url: ""               # сайт о методе Мастера; пусто — ссылок на него нет
   analytics:
@@ -102,13 +102,12 @@ about:
     ru: "Присутствие Мастера, общее поле и ритм ежедневных медитаций. Так опыт становится яснее, а внимание — устойчивее."
     en: "The Master’s presence, the shared field and the rhythm of daily meditation. This is how experience becomes clearer and attention steadier."
   text:
-    - ru: "Привет! С вами команда Искателей. Летом мы снова собираемся в горах Грузии в полюбившемся формате: практикуем с Мастером дважды в день в кругу близких по духу людей."
-      en: "Hi! This is the Seekers team. This summer we gather again in the mountains of Georgia in a format many have come to love: practising with the Master twice a day among kindred spirits."
+    - ru: "Летом мы снова собираемся в горах Грузии: практикуем с Мастером дважды в день в кругу близких по духу людей."
+      en: "This summer we gather again in the mountains of Georgia: practising with the Master twice a day among kindred spirits."
     - ru: "Мы собираемся, чтобы углубить распознавание и унести его в обычную жизнь. А между практиками — замедлиться, побыть среди своих, на природе, в сотворчестве."
       en: "We gather to deepen recognition and carry it into everyday life. And between the sessions — to slow down and be among our own people, in nature, creating together."
   photo: { src: "master.webp", pos: "50% 25%", alt: { ru: "Мастер Камильпаша на ретрите в Казбеги", en: "Master Kamilpasha at the Kazbegi retreat" } }
   photo_small: { src: "retreat-hall.webp", alt: { ru: "Практика в зале", en: "Practice in the hall" } }
-  caption: { ru: "Мастер Камильпаша", en: "Master Kamilpasha" }
 
 # ----------------------------------------------------------------------------- «Как это было»; удалите блок — его не будет
 memories:
@@ -151,8 +150,8 @@ practices:                     # каталог карточек; lead — кт�
     more:
       ru: "Пространство, где можно перестать бороться с собой и расслабить контроль. Тело становится надёжной опорой для более глубокого внутреннего опыта."
       en: "A space to stop fighting yourself and loosen control. The body becomes a steady support for deeper inner experience."
-    lead: { name: { ru: "Дарья", en: "Daria" }, about: "" }   # описание пришлют организаторы
-    art: { name: "yoga", ka: "იოგა", note: { ru: "утром, 07:00–08:00", en: "mornings, 7–8 am" } }   # своего фото нет — иллюстрация (_includes/art.html)
+    lead: { name: "", about: "" }   # имя и описание ведущей — когда пришлют организаторы
+    photo: { src: "body-practice.webp", pos: "50% 60%", alt: { ru: "Утренняя практика на лугу", en: "Morning practice on a meadow" } }
   breathwork:
     title: { ru: "Breathwork", en: "Breathwork" }
     tag: { ru: "включено", en: "included" }
@@ -161,7 +160,7 @@ practices:                     # каталог карточек; lead — кт�
       ru: "Психологические и медитативные путешествия: через тело участники отпускают напряжение и эмоциональные паттерны и входят в более глубокие состояния осознанности."
       en: "Psychological and meditative journeys: through the body, participants release tension and emotional patterns and enter deeper states of awareness."
     lead: { name: "", about: "" }
-    art: { name: "breath", ka: "სუნთქვა", note: { ru: "связное дыхание", en: "connected breathing" } }
+    photo: { src: "card-breathwork.webp", pos: "50% 35%", alt: { ru: "Медитация в зале", en: "Meditation in the hall" } }
   massage:
     title: { ru: "Массаж", en: "Massage" }
     tag: { ru: "за отдельную плату", en: "paid separately" }
@@ -171,7 +170,7 @@ practices:                     # каталог карточек; lead — кт�
       about:                   # текст из Telegram пришлют организаторы
         ru: "Работа с внутренними органами, мышцами, тканями, связками, сухожилиями и внутренними цепями. Техники настроены на разблокировку систем, восстановление кровотока, иннервации тканей и течения энергий."
         en: "Work with the internal organs, muscles, tissues, ligaments, tendons and inner chains. The techniques unblock the body’s systems and restore circulation, the innervation of tissues and the flow of energy."
-    art: { name: "massage", ka: "მასაჟი" }
+    photo: { src: "card-massage.webp", alt: { ru: "Свет на деревянном полу", en: "Light on a wooden floor" } }
   fire:
     title: { ru: "Вечерние костры", en: "Evening bonfires" }
     text: { ru: "Посиделки у огня с рефлексией, музыкой и творчеством.", en: "Gatherings by the fire with reflection, music and creativity." }
@@ -180,7 +179,7 @@ practices:                     # каталог карточек; lead — кт�
     title: { ru: "Барбекю", en: "Barbecue" }
     tag: { ru: "входит в стоимость", en: "included" }
     text: { ru: "Один совместный вечер-барбекю на территории отеля. Дата уточняется.", en: "One shared barbecue evening on the hotel grounds. Date to be confirmed." }
-    art: { name: "bbq", ka: "მწვადი", note: { ru: "один вечер", en: "one evening" } }
+    photo: { src: "card-bbq.webp", alt: { ru: "Общий ужин", en: "A shared dinner" } }
 
 # ----------------------------------------------------------------------------- расписание — ретрит и интенсив отдельными блоками
 schedule:
@@ -229,11 +228,9 @@ intensive:
   note: { ru: "Если запишется меньше 15 человек, интенсив не состоится — оплату вернём целиком.", en: "If fewer than 15 people sign up, the intensive won’t take place and we’ll refund the payment in full." }
   facts:                       # пустое значение — «уточняется»
     - { label: { ru: "Даты", en: "Dates" }, value: { ru: "{intensive_dates}", en: "{intensive_dates}" } }
-    - { label: { ru: "Практик в день", en: "Sessions a day" }, value: "" }
     - { label: { ru: "Для кого", en: "Who it’s for" }, value: { ru: "Для участников ретрита и для тех, кто приедет только на интенсив", en: "For retreat participants and for those coming for the intensive only" } }
     - { label: { ru: "Стоимость", en: "Price" }, value: { ru: "400 € — участникам ретрита · 550 € — только интенсив", en: "€400 for retreat participants · €550 for the intensive only" } }
     - { label: { ru: "Состоится", en: "Goes ahead" }, value: { ru: "от 15 участников, иначе — полный возврат", en: "with at least 15 participants, otherwise a full refund" } }
-    - { label: { ru: "Зал", en: "Hall" }, value: "" }   # отель подтверждает; на цену участия не влияет
     - { label: { ru: "Проживание", en: "Accommodation" }, value: { ru: "Ночи 20–23 июля, выезд {intensive_checkout}", en: "Nights of 20–23 July, check-out on {intensive_checkout}" } }
 
 # ----------------------------------------------------------------------------- лента фото «Казбеги летом» (блок strip на главной)
@@ -241,12 +238,12 @@ strip:
   title: { ru: "Казбеги *летом*", en: "Kazbegi *in summer*" }
   text: { ru: "Луга, кони на склонах, церковь Гергети над посёлком и облака над вершинами — вот что будет вокруг практики.", en: "Meadows, horses on the slopes, Gergeti Church above the village and clouds over the peaks — this is what surrounds the practice." }
   photos:                      # 4–8 фото: вертикальные 3:4; wide: true — широкое 16:9 на две колонки
-    - { src: "strip-1.webp", wide: true, alt: { ru: "Долина Степанцминды", en: "The Stepantsminda valley" }, caption: { ru: "Долина Степанцминды", en: "Stepantsminda valley" } }
-    - { src: "strip-2.webp", pos: "50% 0%", alt: { ru: "Церковь Гергети над лесом", en: "Gergeti Church above the forest" }, caption: { ru: "Гергети", en: "Gergeti" } }
-    - { src: "strip-3.webp", pos: "50% 72%", alt: { ru: "Кони на горном склоне", en: "Horses on a mountain slope" }, caption: { ru: "Кони на склоне", en: "Horses on the slope" } }
-    - { src: "strip-4.webp", alt: { ru: "Облака над вершинами", en: "Clouds over the peaks" }, caption: { ru: "Облака над вершинами", en: "Clouds over the peaks" } }
-    - { src: "strip-5.webp", alt: { ru: "Зелёные скалы над долиной", en: "Green cliffs above the valley" }, caption: { ru: "Зелёные склоны", en: "Green slopes" } }
-    - { src: "strip-6.webp", wide: true, alt: { ru: "Вершины в облаках", en: "Peaks in the clouds" }, caption: { ru: "Вершины в облаках", en: "Peaks in the clouds" } }
+    - { src: "strip-1.webp", wide: true, alt: { ru: "Долина Степанцминды", en: "The Stepantsminda valley" } }
+    - { src: "strip-2.webp", pos: "50% 0%", alt: { ru: "Церковь Гергети над лесом", en: "Gergeti Church above the forest" } }
+    - { src: "strip-3.webp", pos: "50% 72%", alt: { ru: "Кони на горном склоне", en: "Horses on a mountain slope" } }
+    - { src: "strip-4.webp", alt: { ru: "Облака над вершинами", en: "Clouds over the peaks" } }
+    - { src: "strip-5.webp", alt: { ru: "Зелёные скалы над долиной", en: "Green cliffs above the valley" } }
+    - { src: "strip-6.webp", wide: true, alt: { ru: "Вершины в облаках", en: "Peaks in the clouds" } }
 
 # ----------------------------------------------------------------------------- место
 venue:
@@ -256,7 +253,7 @@ venue:
   place: { ru: "Степанцминда, Грузия", en: "Stepantsminda, Georgia" }
   address: "1 V. Gorgasali St, Stepantsminda 4701, Georgia"
   geo: { lat: 42.6589, lng: 44.6508 }
-  website: "https://roomshotels.com/hotel/kazbegi/"
+  website: "https://roomshotels.com/locations/kazbegi"
   website_label: { ru: "Сайт Rooms Kazbegi", en: "Rooms Kazbegi website" }
   kicker: { ru: "Место", en: "The venue" }
   title: { ru: "Rooms Kazbegi — *у подножия Казбека*", en: "Rooms Kazbegi — *at the foot of Kazbek*" }
@@ -268,21 +265,23 @@ venue:
     - { ru: "≈3 часа на машине от Тбилиси", en: "≈3 hours by car from Tbilisi" }
     - { ru: "Номера с завтраком и специальные цены для группы", en: "Rooms with breakfast and special rates for the group" }
     - { ru: "Спа с бассейном и видом на горы", en: "A spa with a pool and mountain views" }
-  photo: { src: "terrace.webp", alt: { ru: "Разговор на террасе с видом на горы", en: "A conversation on the terrace with a mountain view" } }
+  photo: { src: "facade.webp", alt: { ru: "Rooms Kazbegi на фоне гор", en: "Rooms Kazbegi against the mountains" } }
   ring: "ROOMS KAZBEGI ✦ მყინვარწვერი ✦ 5054 M ✦"   # текст на вращающемся круге
   gallery:
     title: { ru: "Атмосфера Rooms", en: "The feel of Rooms" }
     photos:
-      - { src: "lounge.webp", w: 1400, h: 934, alt: { ru: "Лаунж с видом на Казбек", en: "Lounge with a view of Kazbek" }, caption: { ru: "Лаунж с видом на Казбек", en: "Lounge facing Kazbek" } }
-      - { src: "corridor.webp", w: 900, h: 1600, alt: { ru: "Коридор с грузинским ковром", en: "A corridor with a Georgian carpet" }, caption: { ru: "Коридоры", en: "Corridors" } }
-      - { src: "terrace.webp", w: 1000, h: 1250, alt: { ru: "Терраса с видом на горы", en: "The terrace with a mountain view" }, caption: { ru: "Терраса", en: "The terrace" } }
-      - { src: "pool.webp", w: 1400, h: 934, alt: { ru: "Бассейн с панорамой гор", en: "Pool with a mountain panorama" }, caption: { ru: "Бассейн и спа", en: "Pool and spa" } }
-      - { src: "library-bar.webp", w: 1400, h: 934, alt: { ru: "Лобби-бар", en: "Lobby bar" }, caption: { ru: "Лобби-бар", en: "Lobby bar" } }
-      - { src: "food.webp", w: 1400, h: 1050, alt: { ru: "Грузинская кухня", en: "Georgian food" }, caption: "Kazbegi Kitchen" }
-      - { src: "khinkali.webp", w: 1000, h: 1500, alt: { ru: "Хинкали", en: "Khinkali" }, caption: { ru: "Хинкали", en: "Khinkali" } }
-      - { src: "library.webp", w: 1400, h: 934, alt: { ru: "Библиотека", en: "Library" }, caption: { ru: "Библиотека", en: "Library" } }
-      - { src: "breakfast.webp", w: 1400, h: 1050, alt: { ru: "Завтрак", en: "Breakfast" }, caption: { ru: "Завтраки", en: "Breakfast" } }
-      - { src: "room-view.webp", w: 1400, h: 934, alt: { ru: "Номер с видом на Казбек", en: "A room facing Kazbek" }, caption: { ru: "Вид из номера", en: "The view from a room" } }
+      - { src: "lounge.webp", w: 1400, h: 934, alt: { ru: "Лаунж с видом на Казбек", en: "Lounge with a view of Kazbek" } }
+      - { src: "hotel-dusk.webp", w: 1000, h: 1496, alt: { ru: "Отель вечером", en: "The hotel at dusk" } }
+      - { src: "fireplace.webp", w: 1400, h: 934, alt: { ru: "Вечер у камина", en: "An evening by the fireplace" } }
+      - { src: "corridor.webp", w: 900, h: 1600, alt: { ru: "Коридор с грузинским ковром", en: "A corridor with a Georgian carpet" } }
+      - { src: "terrace.webp", w: 1000, h: 1250, alt: { ru: "Терраса с видом на горы", en: "The terrace with a mountain view" } }
+      - { src: "pool.webp", w: 1400, h: 934, alt: { ru: "Бассейн с панорамой гор", en: "Pool with a mountain panorama" } }
+      - { src: "library-bar.webp", w: 1400, h: 934, alt: { ru: "Лобби-бар", en: "Lobby bar" } }
+      - { src: "food.webp", w: 1400, h: 1050, alt: { ru: "Грузинская кухня", en: "Georgian food" } }
+      - { src: "khinkali.webp", w: 1000, h: 1500, alt: { ru: "Хинкали", en: "Khinkali" } }
+      - { src: "library.webp", w: 1400, h: 934, alt: { ru: "Библиотека", en: "Library" } }
+      - { src: "breakfast.webp", w: 1400, h: 1050, alt: { ru: "Завтрак", en: "Breakfast" } }
+      - { src: "room-view.webp", w: 1400, h: 934, alt: { ru: "Номер с видом на Казбек", en: "A room facing Kazbek" } }
 
 # ----------------------------------------------------------------------------- проживание (stay.html)
 rooms:
@@ -290,15 +289,15 @@ rooms:
   kicker: { ru: "Проживание", en: "Accommodation" }
   title: { ru: "Жить там, *где практикуем*", en: "Stay where *we practise*" }
   lead:
-    ru: "Для нашей группы согласованы специальные цены на номера с завтраком. Номер закрепляем за вами мы, а оплачиваете проживание вы — напрямую отелю, при заезде."
+    ru: "Для нашей группы согласованы специальные цены на номера с завтраком. Номер бронируют организаторы, проживание оплачивается напрямую отелю при заезде."
     en: "Special rates have been agreed for our group on rooms with breakfast. We hold the room for you, and you pay for your stay directly to the hotel at check-in."
   options:                     # где можно жить — и на ретрите, и на интенсиве
-    - title: { ru: "В Rooms через нас", en: "At Rooms, through us" }
-      text: { ru: "По цене группы: укажите в анкете категорию номера и даты — мы закрепим номер за вами.", en: "At the group rate: give the room category and dates in the application and we’ll hold the room for you." }
-    - title: { ru: "В Rooms самостоятельно", en: "At Rooms, on your own" }
+    - title: { ru: "Rooms Kazbegi — по групповому тарифу ретрита", en: "Rooms Kazbegi — at the retreat group rate" }
+      text: { ru: "Укажите в анкете категорию номера и даты — организаторы забронируют номер по групповому тарифу.", en: "Give the room category and dates in the application, and the organisers will book the room at the group rate." }
+    - title: { ru: "Rooms Kazbegi — бронирование напрямую", en: "Rooms Kazbegi — direct booking" }
       text: { ru: "Бронь напрямую на сайте отеля — по его обычным ценам.", en: "Book directly on the hotel’s website, at its regular rates." }
-      url: "https://roomshotels.com/hotel/kazbegi/"
-    - title: { ru: "В любом другом месте", en: "Anywhere else" }
+      url: "https://roomshotels.com/locations/kazbegi"
+    - title: { ru: "Другое размещение рядом", en: "Other accommodation nearby" }
       text: { ru: "В гостевом доме или отеле рядом — и приходить на практики и общие активности.", en: "At a guesthouse or hotel nearby — and come for the sessions and shared activities." }
   currency: "$"
   vat: 18                      # НДС, % — цены с НДС сайт считает сам
@@ -333,11 +332,11 @@ rooms:
     ru: "Цены — в долларах, за номер за ночь, завтрак включён: первая цифра — для одного гостя, вторая — для двоих. Официальные ночи ретрита — с {checkin} по {checkout} ({nights} ночей), дополнительные ночи до и после — по тем же ценам."
     en: "Prices are in US dollars, per room per night, breakfast included: the first figure is for one guest, the second for two. The official retreat nights are {checkin} to {checkout} ({nights} nights); extra nights before and after are at the same rates."
   payment:                     # как платить за проживание — заметным блоком
-    ru: "Вы оплачиваете проживание напрямую отелю при заезде. Цены указаны за номер за ночь, завтрак включён, к цене добавляется НДС 18%. Чтобы за вами закрепили номер, укажите в анкете категорию и даты. До какого числа номер держится за группой, уточняется. Участие в ретрите оплачивается отдельно, организатору."
+    ru: "Вы оплачиваете проживание напрямую отелю при заезде. Цены указаны за номер за ночь, завтрак включён, к цене добавляется НДС 18%. Для бронирования номера укажите в анкете категорию и даты. До какого числа номер держится за группой, уточняется. Участие в ретрите оплачивается отдельно, организатору."
     en: "You pay for your stay directly to the hotel at check-in. Prices are per room per night, breakfast included, plus 18% VAT. To have a room held for you, give the category and dates in the application. How long rooms are held for the group is to be confirmed. The retreat fee is paid separately, to the organiser."
   steps:                       # только для through_us: как идёт бронь
     - { ru: "В анкете укажите, что хотите жить в Rooms, категорию номера и даты", en: "In the application, say you’d like to stay at Rooms and give the room category and dates" }
-    - { ru: "Мы закрепляем за вами номер по цене группы", en: "We hold the room for you at the group rate" }
+    - { ru: "Организаторы бронируют номер по групповому тарифу", en: "The organisers book the room at the group rate" }
     - { ru: "Оплата — напрямую отелю при заезде, плюс НДС 18%", en: "Payment — directly to the hotel at check-in, plus 18% VAT" }
   info:                        # пустой text — «уточняется»
     - title: { ru: "Отмена и возврат проживания", en: "Room cancellation and refunds" }
@@ -420,7 +419,7 @@ pricing:
       - { ru: "Три дня углублённой практики с Мастером: 20 июля — 4 ч, 21 июля — 6 ч, 22 июля — 5 ч", en: "Three days of deeper practice with the Master: 20 July — 4 h, 21 July — 6 h, 22 July — 5 h" }
       - { ru: "Можно приехать только на интенсив", en: "You can come for the intensive only" }
       - { ru: "Меньше 15 участников — интенсив не проводим и возвращаем оплату целиком", en: "Fewer than 15 participants — the intensive doesn’t run and payments are refunded in full" }
-      - { ru: "Жильё — в Rooms через нас, в Rooms самостоятельно или в любом другом месте", en: "Stay at Rooms through us, at Rooms on your own, or anywhere else" }
+      - { ru: "Проживание — Rooms Kazbegi по групповому тарифу, Rooms Kazbegi напрямую или другое размещение рядом", en: "Accommodation — Rooms Kazbegi at the group rate, Rooms Kazbegi booked directly, or other accommodation nearby" }
   private: { ru: "100 € / час или 50 € / 30 минут", en: "€100 per hour or €50 per 30 minutes" }
   refund_title: { ru: "Отмена и возврат", en: "Cancellation and refunds" }
   refund:                      # один текст — на главной и в FAQ
@@ -516,7 +515,7 @@ faq:
   - title: { ru: "Проживание", en: "Accommodation" }
     items:
       - q: { ru: "Можно приехать раньше и уехать позже?", en: "Can I arrive earlier and leave later?" }
-        a: { ru: "Конечно! Это лучший способ получить максимум от погружения. Дополнительные ночи до и после — по тем же ценам для группы.", en: "Of course! It’s the best way to get the most out of the immersion. Extra nights before and after are at the same group rates." }
+        a: { ru: "Да. Дополнительные ночи до и после ретрита — по тому же групповому тарифу.", en: "Yes. Extra nights before and after the retreat are at the same group rate." }
       - q: { ru: "Во сколько заезд и выезд?", en: "What are the check-in and check-out times?" }
         a:
           ru: |
@@ -528,9 +527,9 @@ faq:
 
             Check-in and check-out times, early check-in and late check-out will be confirmed once the hotel contract is signed.
       - q: { ru: "Как забронировать номер или изменить бронь?", en: "How do I book a room or change a booking?" }
-        a: { ru: "Через организаторов: укажите в анкете, что хотите жить в Rooms, категорию номера и даты — мы закрепим за вами номер по цене группы. Оплачиваете проживание напрямую отелю при заезде. Изменения брони — тоже через нас.", en: "Through the organisers: in the application, say you’d like to stay at Rooms and give the room category and dates — we hold the room for you at the group rate. You pay for your stay directly to the hotel at check-in. Changes to the booking also go through us." }
+        a: { ru: "Через организаторов: укажите в анкете, что хотите жить в Rooms, категорию номера и даты — организаторы забронируют номер по групповому тарифу. Проживание оплачивается напрямую отелю при заезде. Изменения брони — также через организаторов.", en: "Through the organisers: in the application, say you’d like to stay at Rooms and give the room category and dates — the organisers will book the room at the group rate. Accommodation is paid directly to the hotel at check-in. Changes to the booking also go through the organisers." }
       - q: { ru: "Где посмотреть все фото номеров?", en: "Where can I see all the room photos?" }
-        a: { ru: "Полная подборка — [в этой папке](https://drive.google.com/drive/folders/177Qdydk48egib21E2DL-T3Oa7qNrJIGa?usp=sharing), а описания номеров — на [сайте отеля](https://roomshotels.com/hotel/kazbegi/).", en: "The full set is [in this folder](https://drive.google.com/drive/folders/177Qdydk48egib21E2DL-T3Oa7qNrJIGa?usp=sharing), and the room descriptions are on the [hotel website](https://roomshotels.com/hotel/kazbegi/)." }
+        a: { ru: "Полная подборка — [в этой папке](https://drive.google.com/drive/folders/177Qdydk48egib21E2DL-T3Oa7qNrJIGa?usp=sharing), а описания номеров — на [сайте отеля](https://roomshotels.com/locations/kazbegi).", en: "The full set is [in this folder](https://drive.google.com/drive/folders/177Qdydk48egib21E2DL-T3Oa7qNrJIGa?usp=sharing), and the room descriptions are on the [hotel website](https://roomshotels.com/locations/kazbegi)." }
       - q: { ru: "Сколько стоит проживание?", en: "How much is accommodation?" }
         a: { ru: "От {rooms_from} $ за номер за ночь плюс НДС 18%, завтрак включён. Все цены — на странице [«Проживание»](stay.html). Оплата — напрямую отелю при заезде.", en: "From ${rooms_from} per room per night plus 18% VAT, breakfast included. All prices are on the [Accommodation](stay.html) page. You pay the hotel directly at check-in." }
       - q: { ru: "Завтрак включён?", en: "Is breakfast included?" }
@@ -548,7 +547,7 @@ faq:
       - q: { ru: "Можно приехать только на интенсив?", en: "Can I come for the intensive only?" }
         a: { ru: "Да. Интенсив — {intensive_dates}: 400 € для участников ретрита, 550 € — только интенсив. Если запишется меньше 15 человек, интенсив не состоится, и мы вернём оплату целиком.", en: "Yes. The intensive runs {intensive_dates}: €400 for retreat participants, €550 for the intensive only. If fewer than 15 people sign up, it won’t take place and we’ll refund the payment in full." }
       - q: { ru: "Где жить на интенсиве?", en: "Where do I stay for the intensive?" }
-        a: { ru: "Как и на ретрите: в Rooms через нас по цене группы, в Rooms самостоятельно или в любом другом месте рядом.", en: "Just as for the retreat: at Rooms through us at the group rate, at Rooms on your own, or anywhere else nearby." }
+        a: { ru: "Как и на ретрите: Rooms Kazbegi по групповому тарифу, Rooms Kazbegi с бронированием напрямую или другое размещение рядом.", en: "As for the retreat: Rooms Kazbegi at the group rate, Rooms Kazbegi booked directly, or other accommodation nearby." }
       - q: { ru: "Почему ретрит могут отменить?", en: "Why might the retreat be cancelled?" }
         a:
           ru: |
@@ -608,28 +607,28 @@ form:
   kicker: { ru: "Анкета участника", en: "Application" }
   title: { ru: "Заявка *на ретрит*", en: "Apply for *the retreat*" }
   meta: { ru: "{dates} · Rooms Kazbegi, Степанцминда, Грузия", en: "{dates} · Rooms Kazbegi, Stepantsminda, Georgia" }
-  intro: { ru: "Заполни анкету максимально подробно и осознанно. После неё команда организаторов свяжется с тобой по почте или в Telegram.", en: "Please fill in the form as fully and thoughtfully as you can. The organising team will then contact you by email or Telegram." }
+  intro: { ru: "Пожалуйста, заполните анкету подробно. После этого команда организаторов свяжется с вами по почте или в Telegram.", en: "Please fill in the form as fully and thoughtfully as you can. The organising team will then contact you by email or Telegram." }
   photo: { src: "apply.webp", alt: { ru: "Горы Казбеги", en: "The Kazbegi mountains" } }
   presets:                     # общие варианты ответов
     yes_no: [{ v: "Да", ru: "Да", en: "Yes" }, { v: "Нет", ru: "Нет", en: "No" }]
     times: [{ v: "1" }, { v: "2" }, { v: "3" }, { v: "4" }, { v: "> 5", ru: "Больше 5", en: "More than 5" }]
   steps:
     - title: { ru: "Личные данные", en: "About you" }
-      intro: { ru: "Как к тебе обращаться и как связаться.", en: "How to address you and how to reach you." }
+      intro: { ru: "Как к вам обращаться и как с вами связаться.", en: "How to address you and how to reach you." }
       fields:
-        - { name: fullname, entry: "1866626505", type: text, required: true, autocomplete: name, label: { ru: "Как тебя зовут?", en: "What’s your name?" }, hint: { ru: "Имя и фамилия — как в загранпаспорте", en: "First and last name, exactly as in your passport" }, placeholder: { ru: "Имя Фамилия", en: "First name Last name" } }
+        - { name: fullname, entry: "1866626505", type: text, required: true, autocomplete: name, label: { ru: "Как вас зовут?", en: "What’s your name?" }, hint: { ru: "Имя и фамилия — как в загранпаспорте", en: "First and last name, exactly as in your passport" }, placeholder: { ru: "Имя Фамилия", en: "First name Last name" } }
         - { name: email, entry: "150088759", type: email, required: true, autocomplete: email, label: { ru: "Электронная почта для связи", en: "Email" }, placeholder: { ru: "name@example.com", en: "name@example.com" } }
         - { name: telegram, entry: "1962739531", type: text, required: true, label: { ru: "Telegram для связи", en: "Telegram" }, hint: { ru: "Ник (например, @username) или номер телефона", en: "Username (e.g. @username) or phone number" }, placeholder: { ru: "@username", en: "@username" } }
-        - { name: source, entry: "1600217376", type: textarea, required: true, label: { ru: "Откуда ты знаешь о ретрите с Мастером?", en: "How did you hear about the retreat with the Master?" } }
+        - { name: source, entry: "1600217376", type: textarea, required: true, label: { ru: "Откуда вы узнали о ретрите с Мастером?", en: "How did you hear about the retreat with the Master?" } }
     - title: { ru: "Опыт практики", en: "Your practice" }
       intro: { ru: "Это поможет нам лучше подготовиться к встрече.", en: "This helps us prepare for meeting you." }
       fields:
         - { name: format, entry: "1453769740", type: fixed, value: "Оффлайн" }   # формат один — очный; вопрос обязателен в форме, отвечаем сами
-        - { name: offline, entry: "561608447", type: radio, required: true, options: yes_no, label: { ru: "Есть ли у тебя опыт очных ретритов с Мастером?", en: "Have you been to in-person retreats with the Master?" } }
+        - { name: offline, entry: "561608447", type: radio, required: true, options: yes_no, label: { ru: "Есть ли у вас опыт очных ретритов с Мастером?", en: "Have you been to in-person retreats with the Master?" } }
         - { name: offlineTimes, entry: "1333758775", type: radio, required: true, options: times, show_if: { name: offline, value: "Да" }, value_if_hidden: "Не участвовал", label: { ru: "Сколько раз?", en: "How many times?" } }
         - { name: online, entry: "114879850", type: radio, required: true, options: yes_no, label: { ru: "А опыт онлайн-ретритов с Мастером?", en: "And online retreats with the Master?" } }
         - { name: onlineTimes, entry: "1757094999", type: radio, required: true, options: times, show_if: { name: online, value: "Да" }, value_if_hidden: "Не участвовал", label: { ru: "Сколько раз?", en: "How many times?" } }
-        - { name: regular, entry: "1456676807", type: radio, required: true, options: yes_no, label: { ru: "Занимаешься на регулярных встречах Мастера по понедельникам и четвергам?", en: "Do you attend the Master’s regular Monday and Thursday sessions?" } }
+        - { name: regular, entry: "1456676807", type: radio, required: true, options: yes_no, label: { ru: "Занимаетесь на регулярных встречах Мастера по понедельникам и четвергам?", en: "Do you attend the Master’s regular Monday and Thursday sessions?" } }
         - name: regularHowLong
           entry: "1320910160"
           type: radio
@@ -638,16 +637,16 @@ form:
           value_if_hidden: "Не участвую"
           label: { ru: "Как давно?", en: "For how long?" }
           options: [{ v: "1 месяц", en: "1 month" }, { v: "3 месяца", en: "3 months" }, { v: "6 месяцев", en: "6 months" }, { v: "Больше 1 года", en: "Over a year" }, { v: "Больше 3 лет", en: "Over 3 years" }]
-        - { name: experience, entry: "8220411", type: textarea, label: { ru: "Опиши свой опыт медитативных практик", en: "Describe your meditation experience" }, hint: { ru: "Традиции, методы, сколько лет практикуешь", en: "Traditions, methods, how long you have practised" } }
+        - { name: experience, entry: "8220411", type: textarea, label: { ru: "Опишите свой опыт медитативных практик", en: "Describe your meditation experience" }, hint: { ru: "Традиции, методы, сколько лет практикуете", en: "Traditions, methods, how long you have practised" } }
     - title: { ru: "Проживание", en: "Your stay" }
-      intro: { ru: "Нужны точные даты заезда и выезда, даже если будешь жить не в Rooms Kazbegi.", en: "We need exact arrival and departure dates, even if you stay outside Rooms Kazbegi." }
+      intro: { ru: "Нужны точные даты заезда и выезда, даже если вы будете жить не в Rooms Kazbegi.", en: "We need exact arrival and departure dates, even if you stay outside Rooms Kazbegi." }
       fields:
-        - { name: dates, entry: "1700040031", type: dates, required: true, label: { ru: "Когда приедешь и уедешь?", en: "When will you arrive and leave?" }, hint: { ru: "Ретрит идёт {dates}, интенсив — {intensive_dates}. Официальные ночи ретрита — с {checkin} по {checkout}, после интенсива выезд {intensive_checkout}. Можно приехать только на интенсив", en: "The retreat runs {dates}, the intensive {intensive_dates}. The official retreat nights are {checkin} to {checkout}; after the intensive, check-out is on {intensive_checkout}. You can come for the intensive only" } }
+        - { name: dates, entry: "1700040031", type: dates, required: true, label: { ru: "Когда вы приедете и уедете?", en: "When will you arrive and leave?" }, hint: { ru: "Ретрит идёт {dates}, интенсив — {intensive_dates}. Официальные ночи ретрита — с {checkin} по {checkout}, после интенсива выезд {intensive_checkout}. Можно приехать только на интенсив", en: "The retreat runs {dates}, the intensive {intensive_dates}. The official retreat nights are {checkin} to {checkout}; after the intensive, check-out is on {intensive_checkout}. You can come for the intensive only" } }
         - name: program              # появится, когда в Google-форме 2027 будет этот вопрос: впишите его entry, варианты v — слово в слово как в форме
           entry: ""
           type: cards
           required: true
-          label: { ru: "В чём будешь участвовать?", en: "What will you take part in?" }
+          label: { ru: "В чём вы хотите участвовать?", en: "What would you like to take part in?" }
           options:
             - { v: "Ретрит", ru: "Ретрит · {dates_short}", en: "Retreat · {dates_short}" }
             - { v: "Ретрит и интенсив", ru: "Ретрит и интенсив", en: "Retreat and intensive" }
@@ -656,8 +655,8 @@ form:
           entry: "1508398290"
           type: cards
           required: true
-          label: { ru: "Планируешь жить в Rooms Kazbegi?", en: "Are you planning to stay at Rooms Kazbegi?" }
-          hint: { ru: "Для нашей группы — специальные цены, от {rooms_from} $ за номер за ночь. Оплата — напрямую отелю при заезде", en: "Our group gets special rates, from ${rooms_from} per room per night, paid directly to the hotel at check-in" }   # в форме 2027 стоит добавить вариант «Да, забронирую сам на сайте отеля»
+          label: { ru: "Планируете жить в Rooms Kazbegi?", en: "Are you planning to stay at Rooms Kazbegi?" }
+          hint: { ru: "Для группы ретрита — специальный тариф, от {rooms_from} $ за номер за ночь. Оплата — напрямую отелю при заезде", en: "Our group gets special rates, from ${rooms_from} per room per night, paid directly to the hotel at check-in" }   # в форме 2027 стоит добавить вариант «Да, забронирую сам на сайте отеля»
           options:
             - { v: "Да, хочу забронировать номер", ru: "Да, хочу забронировать номер в Rooms", en: "Yes, I’d like to book a room at Rooms" }
             - { v: "Нет, буду жить в другом месте и приходить только на практику с мастером", ru: "Нет, буду жить в другом месте и приходить на практики", en: "No, I’ll stay elsewhere and come for the sessions" }
@@ -667,8 +666,8 @@ form:
           required: true
           show_if: { name: stay, value: "Да, хочу забронировать номер" }
           value_if_hidden: "Живу в другом месте"
-          label: { ru: "Будешь жить в номере один или вдвоём?", en: "Will you stay alone or share a room?" }
-          hint: { ru: "Если знаешь, с кем хочешь жить, выбери «Другое» и укажи имя и фамилию соседа как в загранпаспорте", en: "If you know who you’d like to share with, choose “Other” and give their name exactly as in their passport" }
+          label: { ru: "Вы будете жить в номере один или вдвоём?", en: "Will you stay alone or share a room?" }
+          hint: { ru: "Если вы знаете, с кем хотите жить, выберите «Другое» и укажите имя и фамилию соседа как в загранпаспорте", en: "If you know who you’d like to share with, choose “Other” and give their name exactly as in their passport" }
           options: [{ v: "Один", ru: "Один", en: "Alone" }, { v: "Вдвоем", ru: "Вдвоём", en: "Two of us" }]
           other: { ru: "Другое — с конкретным человеком", en: "Other — with a specific person" }
         - name: roomType             # появится, когда в форме 2027 будет вопрос о категории номера: впишите entry
@@ -686,7 +685,7 @@ form:
             - { v: "Executive King, вид на горы", en: "Executive King, mountain view" }
             - { v: "Signature King, вид на лес", en: "Signature King, forest view" }
             - { v: "Signature King, вид на горы", en: "Signature King, mountain view" }
-        - { name: child, entry: "882413745", type: textarea, show_if: { name: stay, value: "Да, хочу забронировать номер" }, label: { ru: "Будешь жить в Rooms с ребёнком?", en: "Will a child stay with you at Rooms?" }, hint: { ru: "Если да — сколько детей и сколько им лет. Условия для детей уточним после договора с отелем", en: "If so, how many children and their ages. Terms for children will be confirmed once the hotel contract is signed" } }
+        - { name: child, entry: "882413745", type: textarea, show_if: { name: stay, value: "Да, хочу забронировать номер" }, label: { ru: "Вы будете жить в Rooms с ребёнком?", en: "Will a child stay with you at Rooms?" }, hint: { ru: "Если да — сколько детей и сколько им лет. Условия для детей уточним после договора с отелем", en: "If so, how many children and their ages. Terms for children will be confirmed once the hotel contract is signed" } }
         - name: roomsWait               # обязательный вопрос формы «номера закончились» — отвечаем сами по выбору «жить в Rooms»
           entry: "1091618273"
           type: derived
@@ -694,7 +693,7 @@ form:
           map: { "Да, хочу забронировать номер": "Хочу жить в Rooms! Сообщите как появится любой свободный номер!" }
           default: "Проживаю в другом месте"
         - type: note
-          text: { ru: "Номер в Rooms Kazbegi закрепляют за тобой организаторы — по цене группы. Проживание оплачивается напрямую отелю при заезде, к цене добавляется НДС 18%.", en: "The organisers hold your room at Rooms Kazbegi at the group rate. You pay for your stay directly to the hotel at check-in, plus 18% VAT." }
+          text: { ru: "Номер в Rooms Kazbegi бронируют организаторы — по групповому тарифу. Проживание оплачивается напрямую отелю при заезде, к цене добавляется НДС 18%.", en: "The organisers hold your room at Rooms Kazbegi at the group rate. You pay for your stay directly to the hotel at check-in, plus 18% VAT." }
     - title: { ru: "Активности и условия", en: "Activities & terms" }
       intro: { ru: "Последний шаг.", en: "The last step." }
       fields:
@@ -704,7 +703,7 @@ form:
           entry: "157482944"
           type: checkboxes
           show_if: { name: activitiesWanted, value: "Да" }
-          label: { ru: "Какие активности тебе интересны?", en: "Which activities interest you?" }
+          label: { ru: "Какие активности вам интересны?", en: "Which activities interest you?" }
           options:
             - { v: "Поездка на внедорожниках к достопримечательностям", ru: "Поездка на внедорожниках к достопримечательностям", en: "Off-road trip to the sights" }
             - { v: "Конная прогулка по горам", ru: "Конная прогулка по горам", en: "Horse ride in the mountains" }
@@ -713,5 +712,5 @@ form:
             - { v: "Прогулки по ближайшим деревням", ru: "Прогулки по ближайшим деревням", en: "Walks to nearby villages" }
             - { v: "Предложу свой вариант в чате", ru: "Предложу свой вариант в чате", en: "I’ll suggest my own in the chat" }
           other: { ru: "Другое", en: "Other" }
-        - { name: propose, entry: "1874340831", type: textarea, label: { ru: "Хочешь предложить или провести какую-то активность?", en: "Would you like to offer or lead an activity?" }, hint: { ru: "Коротко: что это и с чем нужна помощь", en: "Briefly: what it is and what help you need" } }
+        - { name: propose, entry: "1874340831", type: textarea, label: { ru: "Хотите предложить или провести какую-то активность?", en: "Would you like to offer or lead an activity?" }, hint: { ru: "Коротко: что это и с чем нужна помощь", en: "Briefly: what it is and what help you need" } }
         - { name: consent, entry: "1828670316", type: consent, required: true, value: "Я ОЗНАКОМЛЕН С УСЛОВИЯМИ УЧАСТИЯ В РЕТРИТЕ И ПРИНИМАЮ ИХ", text: { ru: "Я принимаю [условия участия в ретрите]({rules})", en: "I accept the [retreat terms and rules]({rules})" } }
