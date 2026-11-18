@@ -40,16 +40,16 @@
   {%- endif %}
   {% include jsonld.html %}
 {%- endif %}
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css?v={{ site.time | date: "%s" }}">
 {%- if R.identity.css %}
   {%- if R.identity.font %}
   {%- capture ka_text -%}{{ R.identity.watermark }}{{ R.identity.panorama.peak_ka }}{{ R.identity.panorama.church_ka }}{{ R.venue.ring }}{%- for pr in R.practices -%}{{ pr[1].art.ka }}{%- endfor -%}{%- endcapture %}
   <link href="https://fonts.googleapis.com/css2?family={{ R.identity.font | replace: ' ', '+' }}:wght@400;500&display=swap&text={{ ka_text | url_encode }}" rel="stylesheet">
   {%- endif %}
-  <link rel="stylesheet" href="assets/css/{{ R.identity.css }}">
+  <link rel="stylesheet" href="assets/css/{{ R.identity.css }}?v={{ site.time | date: "%s" }}">
 {%- endif %}
 {%- if page.apply %}
-  <link rel="stylesheet" href="assets/css/apply.css">
+  <link rel="stylesheet" href="assets/css/apply.css?v={{ site.time | date: "%s" }}">
 {%- endif %}
 
   <!-- Язык до первой отрисовки: ?lang=en → сохранённый выбор → русский -->
@@ -89,9 +89,9 @@
 {%- endif %}
   {% include analytics.html %}
 {%- if page.apply %}
-  <script src="assets/js/apply.js" defer></script>
+  <script src="assets/js/apply.js?v={{ site.time | date: "%s" }}" defer></script>
 {%- else %}
-  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/main.js?v={{ site.time | date: "%s" }}" defer></script>
 {%- endif %}
 </body>
 </html>

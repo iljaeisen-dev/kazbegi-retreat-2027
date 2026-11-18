@@ -363,6 +363,15 @@ activities:
     - { photo: "offroad.webp", title: { ru: "Офф-роуд", en: "Off-road" }, text: { ru: "По труднодоступным и самым красивым местам.", en: "To the remotest and most beautiful places." } }
     - { photo: "master-session.webp", pos: "62% 30%", title: { ru: "Частное занятие с Мастером", en: "Private session with the Master" }, text: { ru: "При наличии времени и возможности, по предварительной договорённости: {private}.", en: "When time allows, by appointment: {private}." } }
 
+# ----------------------------------------------------------------------------- короткие видео окрестностей (блок clips на странице «Досуг»); удалите раздел — блока не будет
+clips:
+  title: { ru: "Вокруг *Казбеги*", en: "Around *Kazbegi*" }
+  text: { ru: "Старые башни, каменные церкви и альпийские луга в соседних долинах — сюда можно поехать в свободное время.", en: "Old towers, stone churches and alpine meadows in the neighbouring valleys — places to visit in your free time." }
+  items:                       # вертикальные клипы 9:16 без звука в assets/video/: src — видео, poster — первый кадр
+    - { src: "clip-tower.mp4", poster: "clip-tower.webp", alt: { ru: "Старая башня на фоне снежных вершин", en: "An old tower against snowy peaks" } }
+    - { src: "clip-church.mp4", poster: "clip-church.webp", alt: { ru: "Каменная церковь в горной долине", en: "A stone church in a mountain valley" } }
+    - { src: "clip-crosses.mp4", poster: "clip-crosses.webp", alt: { ru: "Каменные кресты и цветы на склоне", en: "Stone crosses and flowers on a slope" } }
+
 # ----------------------------------------------------------------------------- сотворчество
 cocreate:
   kicker: { ru: "Сотворчество", en: "Co-creation" }
@@ -565,13 +574,17 @@ faq:
           ru: |
             - Комфортную одежду для длительной практики;
             - тёплую одежду — мы будем в горах;
+            - дождевик и обувь для прогулок;
             - блокнот и ручку для заметок;
-            - SPF.
+            - SPF — солнце в горах сильное;
+            - купальник для бассейна и спа.
           en: |
             - Comfortable clothes for long sessions;
             - warm clothes — we’ll be in the mountains;
+            - a rain jacket and walking shoes;
             - a notebook and pen;
-            - sunscreen.
+            - sunscreen — the mountain sun is strong;
+            - a swimsuit for the pool and spa.
       - q: { ru: "Какая будет погода?", en: "What will the weather be like?" }
         a: { ru: "В горах погода непредсказуема, но в среднем днём около +20 °C, ночью около +10 °C.", en: "Mountain weather is unpredictable, but on average it’s about +20 °C by day and +10 °C at night." }
       - q: { ru: "Что ещё важно знать?", en: "What else is important?" }

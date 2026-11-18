@@ -1,0 +1,24 @@
+{%- assign Cl = R.clips -%}
+{%- if Cl and Cl.items -%}
+    <!-- ===================== CLIPS: короткие видео окрестностей (clips) ===================== -->
+    <section class="section clips" id="clips">
+      <div class="container strip__head">
+        <h2 class="h2 reveal">{% include t.html v=Cl.title %}</h2>
+        {%- if Cl.text %}
+        <p class="lead reveal" data-delay="1">{% include t.html v=Cl.text %}</p>
+        {%- endif %}
+      </div>
+      <div class="container">
+        <div class="clips__track">
+          {%- for c in Cl.items %}
+          {%- assign c_alt = c.alt.ru | default: c.alt -%}
+          <figure class="clips__item reveal"{% if forloop.index0 > 0 %} data-delay="{{ forloop.index0 }}"{% endif %}>
+            <video muted loop playsinline preload="none" data-autoplay poster="assets/video/{{ c.poster }}?v={{ site.time | date: "%s" }}" aria-label="{{ c_alt | escape }}">
+              <source src="assets/video/{{ c.src }}?v={{ site.time | date: "%s" }}" type="video/mp4">
+            </video>
+          </figure>
+          {%- endfor %}
+        </div>
+      </div>
+    </section>
+{%- endif -%}
