@@ -72,7 +72,7 @@ retreat:
   hero:
     photos:                    # 1–4 фото, сменяют друг друга; m — вертикальный кадр для телефона
       - { src: "hero-1.webp", m: "hero-1-m.webp" }
-      - { src: "hero-2.webp", m: "hero-2-m.webp", pos: "64% 40%" }
+      - { src: "hero-2.webp", m: "hero-2-m.webp" }   # общий кадр зала с лёгким размытием — лица не читаются
       - { src: "hero-3.webp", m: "hero-3-m.webp" }
       - { src: "hero-4.webp", m: "hero-4-m.webp", pos: "50% 60%" }
     # video: { src: "hero.mp4", mobile: "hero-mobile.mp4", poster: "hero-poster.webp", poster_m: "hero-poster-m.webp" }
@@ -107,7 +107,6 @@ about:
     - ru: "Мы собираемся, чтобы углубить распознавание и унести его в обычную жизнь. А между практиками — замедлиться, побыть среди своих, на природе, в сотворчестве."
       en: "We gather to deepen recognition and carry it into everyday life. And between the sessions — to slow down and be among our own people, in nature, creating together."
   photo: { src: "master.webp", pos: "50% 25%", alt: { ru: "Мастер Камильпаша на ретрите в Казбеги", en: "Master Kamilpasha at the Kazbegi retreat" } }
-  photo_small: { src: "retreat-hall.webp", alt: { ru: "Практика в зале", en: "Practice in the hall" } }
 
 # ----------------------------------------------------------------------------- «Как это было»; удалите блок — его не будет
 memories:
@@ -282,6 +281,7 @@ venue:
       - { src: "library.webp", w: 1400, h: 934, alt: { ru: "Библиотека", en: "Library" } }
       - { src: "breakfast.webp", w: 1400, h: 1050, alt: { ru: "Завтрак", en: "Breakfast" } }
       - { src: "room-view.webp", w: 1400, h: 934, alt: { ru: "Номер с видом на Казбек", en: "A room facing Kazbek" } }
+      - { src: "retreat-hall.webp", w: 1200, h: 800, alt: { ru: "Практика в зале", en: "Practice in the hall" } }
 
 # ----------------------------------------------------------------------------- проживание (stay.html)
 rooms:
