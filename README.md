@@ -132,7 +132,7 @@ jekyll build && cd _site && python3 -m http.server 8777
 
 ## Публикация
 
-Сайт опубликован на GitHub Pages: **https://timurumarov1984-afk.github.io/kazbegi-retreat-2027/**
+Сайт опубликован на GitHub Pages: **https://georgia.retreatmaster.online/**
 (репозиторий `timurumarov1984-afk/kazbegi-retreat-2027`, ветка `main`). Сайт собирает сам GitHub, через 1–2 минуты после изменения.
 
 Сейчас это **черновик для согласования** (с отелем и организаторами):
