@@ -178,7 +178,7 @@ practices:                     # каталог карточек; lead — кт�
     title: { ru: "Барбекю", en: "Barbecue" }
     tag: { ru: "входит в стоимость", en: "included" }
     text: { ru: "Один совместный вечер-барбекю на территории отеля. Дата уточняется.", en: "One shared barbecue evening on the hotel grounds. Date to be confirmed." }
-    photo: { src: "card-bbq.webp", alt: { ru: "Общий ужин", en: "A shared dinner" } }
+    photo: { src: "card-bbq.webp", pos: "50% 80%", alt: { ru: "Барбекю на лугу под горами", en: "A barbecue on a meadow beneath the mountains" } }
 
 # ----------------------------------------------------------------------------- расписание — ретрит и интенсив отдельными блоками
 schedule:
