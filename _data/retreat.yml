@@ -609,14 +609,13 @@ footer:
   about: { ru: "Ретрит с Мастером Камильпашой в Rooms Kazbegi. {dates}, интенсив {intensive_dates}. Степанцминда, Грузия.", en: "Retreat with Master Kamilpasha at Rooms Kazbegi. {dates}, intensive {intensive_dates}. Stepantsminda, Georgia." }
 
 # ----------------------------------------------------------------------------- анкета (apply.html)
-#  Вопросы должны совпадать с Google-формой: entry — номер поля, v — вариант ответа слово в слово.
-#  Проверка: node tools/check-form.mjs _site/apply.html (после сборки) или адрес опубликованной анкеты.
+#  Анкета 2027 без Google-формы. Имена полей, варианты (v), show_if и тексты согласий сверяются с form_schema.py
+#  репозитория регистрации: python tools/check_form.py (код выхода 1 — расхождение). entry k27_<имя> — не Google: без entry apply.js прячет поле.
 form:
-  google_form: "https://docs.google.com/forms/d/e/1FAIpQLSdNdcz-bhe11F-3Ln2LerXR3q0brYlOSSoA6LhBOBS9X0bdsg/formResponse"
+  google_form: "https://t.me/Kazbegi_Retreat_bot"   # запасной путь на экране ошибки и без JavaScript (Google-форма 2026 закрыта)
   enabled: false               # false — анкету можно посмотреть, но заявки не отправляются (черновик). true — принимаем заявки
-  endpoint: ""                 # адрес Apps Script (см. apps-script/README.md). Пока пусто — заявка уходит напрямую в форму без подтверждения
-  extra: { fvv: "1", pageHistory: "0,1,2,3,4", fbzx: "-3094951576178558100", partialResponse: "[null,null,\"-3094951576178558100\"]", submissionTimestamp: "-1" }
-  draft_key: "retreat-apply-kazbegi-2027"
+  endpoint: ""                 # адрес приёмника заявок (наш сервер). Пусто, пока приём не открыт
+  draft_key: "retreat-apply-kazbegi-2027.1"   # черновики анкеты 2026 года не подтягиваются
   kicker: { ru: "Анкета участника", en: "Application" }
   title: { ru: "Заявка *на ретрит*", en: "Apply for *the retreat*" }
   meta: { ru: "{dates} · Rooms Kazbegi, Степанцминда, Грузия", en: "{dates} · Rooms Kazbegi, Stepantsminda, Georgia" }
@@ -626,37 +625,11 @@ form:
     yes_no: [{ v: "Да", ru: "Да", en: "Yes" }, { v: "Нет", ru: "Нет", en: "No" }]
     times: [{ v: "1" }, { v: "2" }, { v: "3" }, { v: "4" }, { v: "> 5", ru: "Больше 5", en: "More than 5" }]
   steps:
-    - title: { ru: "Личные данные", en: "About you" }
-      intro: { ru: "Как к вам обращаться и как с вами связаться.", en: "How to address you and how to reach you." }
+    - title: { ru: "Участие", en: "Participation" }
+      intro: { ru: "Сначала — в чём вы хотите участвовать.", en: "First, what would you like to join?" }
       fields:
-        - { name: fullname, entry: "1866626505", type: text, required: true, autocomplete: name, label: { ru: "Как вас зовут?", en: "What’s your name?" }, hint: { ru: "Имя и фамилия — как в загранпаспорте", en: "First and last name, exactly as in your passport" }, placeholder: { ru: "Имя Фамилия", en: "First name Last name" } }
-        - { name: email, entry: "150088759", type: email, required: true, autocomplete: email, label: { ru: "Электронная почта для связи", en: "Email" }, placeholder: { ru: "name@example.com", en: "name@example.com" } }
-        - { name: telegram, entry: "1962739531", type: text, required: true, label: { ru: "Telegram для связи", en: "Telegram" }, hint: { ru: "Ник (например, @username) или номер телефона", en: "Username (e.g. @username) or phone number" }, placeholder: { ru: "@username", en: "@username" } }
-        - { name: source, entry: "1600217376", type: textarea, required: true, label: { ru: "Откуда вы узнали о ретрите с Мастером?", en: "How did you hear about the retreat with the Master?" } }
-    - title: { ru: "Опыт практики", en: "Your practice" }
-      intro: { ru: "Это поможет нам лучше подготовиться к встрече.", en: "This helps us prepare for meeting you." }
-      fields:
-        - { name: format, entry: "1453769740", type: fixed, value: "Оффлайн" }   # формат один — очный; вопрос обязателен в форме, отвечаем сами
-        - { name: offline, entry: "561608447", type: radio, required: true, options: yes_no, label: { ru: "Есть ли у вас опыт очных ретритов с Мастером?", en: "Have you been to in-person retreats with the Master?" } }
-        - { name: offlineTimes, entry: "1333758775", type: radio, required: true, options: times, show_if: { name: offline, value: "Да" }, value_if_hidden: "Не участвовал", label: { ru: "Сколько раз?", en: "How many times?" } }
-        - { name: online, entry: "114879850", type: radio, required: true, options: yes_no, label: { ru: "А опыт онлайн-ретритов с Мастером?", en: "And online retreats with the Master?" } }
-        - { name: onlineTimes, entry: "1757094999", type: radio, required: true, options: times, show_if: { name: online, value: "Да" }, value_if_hidden: "Не участвовал", label: { ru: "Сколько раз?", en: "How many times?" } }
-        - { name: regular, entry: "1456676807", type: radio, required: true, options: yes_no, label: { ru: "Занимаетесь на регулярных встречах Мастера по понедельникам и четвергам?", en: "Do you attend the Master’s regular Monday and Thursday sessions?" } }
-        - name: regularHowLong
-          entry: "1320910160"
-          type: radio
-          required: true
-          show_if: { name: regular, value: "Да" }
-          value_if_hidden: "Не участвую"
-          label: { ru: "Как давно?", en: "For how long?" }
-          options: [{ v: "1 месяц", en: "1 month" }, { v: "3 месяца", en: "3 months" }, { v: "6 месяцев", en: "6 months" }, { v: "Больше 1 года", en: "Over a year" }, { v: "Больше 3 лет", en: "Over 3 years" }]
-        - { name: experience, entry: "8220411", type: textarea, label: { ru: "Опишите свой опыт медитативных практик", en: "Describe your meditation experience" }, hint: { ru: "Традиции, методы, сколько лет практикуете", en: "Traditions, methods, how long you have practised" } }
-    - title: { ru: "Проживание", en: "Your stay" }
-      intro: { ru: "Нужны точные даты заезда и выезда, даже если вы будете жить не в Rooms Kazbegi.", en: "We need exact arrival and departure dates, even if you stay outside Rooms Kazbegi." }
-      fields:
-        - { name: dates, entry: "1700040031", type: dates, required: true, label: { ru: "Когда вы приедете и уедете?", en: "When will you arrive and leave?" }, hint: { ru: "Ретрит идёт {dates}, интенсив — {intensive_dates}. Официальные ночи ретрита — с {checkin} по {checkout}, после интенсива выезд {intensive_checkout}. Можно приехать только на интенсив", en: "The retreat runs {dates}, the intensive {intensive_dates}. The official retreat nights are {checkin} to {checkout}; after the intensive, check-out is on {intensive_checkout}. You can come for the intensive only" } }
-        - name: program              # появится, когда в Google-форме 2027 будет этот вопрос: впишите его entry, варианты v — слово в слово как в форме
-          entry: ""
+        - name: program
+          entry: "k27_program"
           type: cards
           required: true
           label: { ru: "В чём вы хотите участвовать?", en: "What would you like to take part in?" }
@@ -664,31 +637,72 @@ form:
             - { v: "Ретрит", ru: "Ретрит · {dates_short}", en: "Retreat · {dates_short}" }
             - { v: "Ретрит и интенсив", ru: "Ретрит и интенсив", en: "Retreat and intensive" }
             - { v: "Только интенсив", ru: "Только интенсив · {intensive_dates}", en: "Intensive only · {intensive_dates}" }
-        - name: stay
-          entry: "1508398290"
-          type: cards
-          required: true
-          label: { ru: "Планируете жить в Rooms Kazbegi?", en: "Are you planning to stay at Rooms Kazbegi?" }
-          hint: { ru: "Для группы ретрита — специальный тариф, от {rooms_from} $ за номер за ночь. Оплата — напрямую отелю при заезде", en: "Our group gets special rates, from ${rooms_from} per room per night, paid directly to the hotel at check-in" }   # в форме 2027 стоит добавить вариант «Да, забронирую сам на сайте отеля»
-          options:
-            - { v: "Да, хочу забронировать номер", ru: "Да, хочу забронировать номер в Rooms", en: "Yes, I’d like to book a room at Rooms" }
-            - { v: "Нет, буду жить в другом месте и приходить только на практику с мастером", ru: "Нет, буду жить в другом месте и приходить на практики", en: "No, I’ll stay elsewhere and come for the sessions" }
-        - name: roommate
-          entry: "1103524626"
-          type: checkboxes
-          required: true
-          show_if: { name: stay, value: "Да, хочу забронировать номер" }
-          value_if_hidden: "Живу в другом месте"
-          label: { ru: "Вы будете жить в номере один или вдвоём?", en: "Will you stay alone or share a room?" }
-          hint: { ru: "Если вы знаете, с кем хотите жить, выберите «Другое» и укажите имя и фамилию соседа как в загранпаспорте", en: "If you know who you’d like to share with, choose “Other” and give their name exactly as in their passport" }
-          options: [{ v: "Один", ru: "Один", en: "Alone" }, { v: "Вдвоем", ru: "Вдвоём", en: "Two of us" }]
-          other: { ru: "Другое — с конкретным человеком", en: "Other — with a specific person" }
-        - name: roomType             # появится, когда в форме 2027 будет вопрос о категории номера: впишите entry
-          entry: ""
+        - name: hasRetreat           # служебное: «да», если выбран ретрит (по нему показываются активности)
+          entry: "k27_hasRetreat"
+          type: derived
+          from: program
+          map: { "Ретрит": "да", "Ретрит и интенсив": "да" }
+          default: "нет"
+    - title: { ru: "Личные данные", en: "About you" }
+      intro: { ru: "Как к вам обращаться и как с вами связаться.", en: "How to address you and how to reach you." }
+      fields:
+        - { name: fullname, entry: "k27_fullname", type: text, required: true, autocomplete: name, label: { ru: "Как вас зовут?", en: "What’s your name?" }, hint: { ru: "Имя и фамилия — как в загранпаспорте", en: "First and last name, exactly as in your passport" }, placeholder: { ru: "Имя Фамилия", en: "First name Last name" } }
+        - { name: email, entry: "k27_email", type: email, required: true, autocomplete: email, label: { ru: "Электронная почта для связи", en: "Email" }, placeholder: { ru: "name@example.com", en: "name@example.com" } }
+        - { name: telegram, entry: "k27_telegram", type: text, required: true, label: { ru: "Telegram для связи", en: "Telegram" }, hint: { ru: "Ник (например, @username) или номер телефона", en: "Username (e.g. @username) or phone number" }, placeholder: { ru: "@username", en: "@username" } }
+        - { name: source, entry: "k27_source", type: textarea, required: true, label: { ru: "Откуда вы узнали о ретрите с Мастером?", en: "How did you hear about the retreat with the Master?" } }
+        - { name: referrer, entry: "k27_referrer", type: text, label: { ru: "Кто вас позвал?", en: "Who invited you?" }, hint: { ru: "Если вас пригласил кто-то из участников — напишите имя. Можно оставить пустым", en: "If someone from the group invited you, write their name. You can leave this empty" } }
+    - title: { ru: "Опыт практики", en: "Your practice" }
+      intro: { ru: "Это поможет нам лучше подготовиться к встрече.", en: "This helps us prepare for meeting you." }
+      fields:
+        - { name: offline, entry: "k27_offline", type: radio, required: true, options: yes_no, label: { ru: "Есть ли у вас опыт очных ретритов с Мастером?", en: "Have you been to in-person retreats with the Master?" } }
+        - { name: offlineTimes, entry: "k27_offlineTimes", type: radio, required: true, options: times, show_if: { name: offline, value: "Да" }, value_if_hidden: "Не участвовал", label: { ru: "Сколько раз?", en: "How many times?" } }
+        - { name: online, entry: "k27_online", type: radio, required: true, options: yes_no, label: { ru: "А опыт онлайн-ретритов с Мастером?", en: "And online retreats with the Master?" } }
+        - { name: onlineTimes, entry: "k27_onlineTimes", type: radio, required: true, options: times, show_if: { name: online, value: "Да" }, value_if_hidden: "Не участвовал", label: { ru: "Сколько раз?", en: "How many times?" } }
+        - { name: regular, entry: "k27_regular", type: radio, required: true, options: yes_no, label: { ru: "Занимаетесь на регулярных встречах Мастера по понедельникам и четвергам?", en: "Do you attend the Master’s regular Monday and Thursday sessions?" } }
+        - name: regularHowLong
+          entry: "k27_regularHowLong"
           type: radio
           required: true
-          show_if: { name: stay, value: "Да, хочу забронировать номер" }
-          value_if_hidden: "Живу в другом месте"
+          show_if: { name: regular, value: "Да" }
+          value_if_hidden: "Не участвую"
+          label: { ru: "Как давно?", en: "For how long?" }
+          options: [{ v: "1 месяц", en: "1 month" }, { v: "3 месяца", en: "3 months" }, { v: "6 месяцев", en: "6 months" }, { v: "Больше 1 года", en: "Over a year" }, { v: "Больше 3 лет", en: "Over 3 years" }]
+        - { name: experience, entry: "k27_experience", type: textarea, label: { ru: "Опишите свой опыт медитативных практик", en: "Describe your meditation experience" }, hint: { ru: "Традиции, методы, сколько лет практикуете", en: "Traditions, methods, how long you have practised" } }
+    - title: { ru: "Проживание", en: "Your stay" }
+      intro: { ru: "Нужны точные даты заезда и выезда, даже если вы будете жить не в Rooms Kazbegi.", en: "We need exact arrival and departure dates, even if you stay outside Rooms Kazbegi." }
+      fields:
+        - { name: dates, entry: "k27_dates", type: dates, required: true, label: { ru: "Когда вы приедете и уедете?", en: "When will you arrive and leave?" }, hint: { ru: "Ретрит идёт {dates}, интенсив — {intensive_dates}. Официальные ночи ретрита — с {checkin} по {checkout}, после интенсива выезд {intensive_checkout}. Если вы едете только на интенсив — поменяйте даты", en: "The retreat runs {dates}, the intensive {intensive_dates}. The official retreat nights are {checkin} to {checkout}; after the intensive, check-out is on {intensive_checkout}. If you come for the intensive only, please change the dates" } }
+        - { name: allDays, entry: "k27_allDays", type: radio, required: true, options: yes_no, label: { ru: "Будете все дни программы?", en: "Will you be there for the whole programme?" } }
+        - { name: partialWhy, entry: "k27_partialWhy", type: textarea, show_if: { name: allDays, value: "Нет" }, label: { ru: "В какие дни вас не будет?", en: "Which days will you miss?" }, hint: { ru: "Мы очень рекомендуем быть всё время — практика складывается день за днём. Если не получается, напишите, когда приедете и уедете и почему", en: "We strongly recommend staying for the whole time — the practice builds day by day. If you can’t, tell us when you arrive and leave, and why" } }
+        - name: stay
+          entry: "k27_stay"
+          type: radio
+          required: true
+          label: { ru: "Где вы будете жить?", en: "Where will you stay?" }
+          hint: { ru: "Для группы ретрита в Rooms Kazbegi — специальный тариф, от {rooms_from} $ за номер за ночь", en: "Our group gets special rates at Rooms Kazbegi, from ${rooms_from} per room per night" }
+          options:
+            - { v: "Rooms, отдельный номер", ru: "Rooms, живу один / одна", en: "Rooms, a room of my own" }
+            - { v: "Rooms, вдвоём — плачу я", ru: "Rooms, вдвоём — плачу за номер я", en: "Rooms, sharing — I pay for the room" }
+            - { v: "Rooms, вдвоём — платит сосед", ru: "Rooms, вдвоём — за номер платит сосед", en: "Rooms, sharing — my roommate pays for the room" }
+            - { v: "Rooms — бронирую напрямую в отеле", ru: "Rooms — бронирую сам(а) напрямую в отеле", en: "Rooms — I book directly with the hotel myself" }
+            - { v: "Живу в другом месте", ru: "Живу в другом месте и прихожу на практики", en: "I stay elsewhere and come for the sessions" }
+        - name: inBlock              # служебное: «да», если номер бронируют организаторы
+          entry: "k27_inBlock"
+          type: derived
+          from: stay
+          map: { "Rooms, отдельный номер": "да", "Rooms, вдвоём — плачу я": "да", "Rooms, вдвоём — платит сосед": "да" }
+          default: "нет"
+        - name: shared               # служебное: «да», если живёте вдвоём
+          entry: "k27_shared"
+          type: derived
+          from: stay
+          map: { "Rooms, вдвоём — плачу я": "да", "Rooms, вдвоём — платит сосед": "да" }
+          default: "нет"
+        - name: roomType
+          entry: "k27_roomType"
+          type: radio
+          required: true
+          show_if: { name: inBlock, value: "да" }
           label: { ru: "Какая категория номера?", en: "Which room category?" }
           options:
             - { v: "Standard King, вид на лес", en: "Standard King, forest view" }
@@ -698,25 +712,20 @@ form:
             - { v: "Executive King, вид на горы", en: "Executive King, mountain view" }
             - { v: "Signature King, вид на лес", en: "Signature King, forest view" }
             - { v: "Signature King, вид на горы", en: "Signature King, mountain view" }
-        - { name: child, entry: "882413745", type: textarea, show_if: { name: stay, value: "Да, хочу забронировать номер" }, label: { ru: "Вы будете жить в Rooms с ребёнком?", en: "Will a child stay with you at Rooms?" }, hint: { ru: "Если да — сколько детей и сколько им лет. Условия для детей уточним после договора с отелем", en: "If so, how many children and their ages. Terms for children will be confirmed once the hotel contract is signed" } }
-        - name: roomsWait               # обязательный вопрос формы «номера закончились» — отвечаем сами по выбору «жить в Rooms»
-          entry: "1091618273"
-          type: derived
-          from: stay
-          map: { "Да, хочу забронировать номер": "Хочу жить в Rooms! Сообщите как появится любой свободный номер!" }
-          default: "Проживаю в другом месте"
+        - { name: roommateName, entry: "k27_roommateName", type: text, required: true, show_if: { name: shared, value: "да" }, label: { ru: "С кем вы будете жить?", en: "Who will you share with?" }, hint: { ru: "Имя и фамилия соседа — как в загранпаспорте. Если ещё не знаете с кем — напишите «пока не знаю»", en: "Your roommate’s first and last name, exactly as in their passport. If you don’t know yet, write “not yet”" } }
+        - { name: extraBed, entry: "k27_extraBed", type: radio, options: yes_no, show_if: { name: inBlock, value: "да" }, label: { ru: "Нужна дополнительная кровать?", en: "Do you need an extra bed?" } }
+        - { name: child, entry: "k27_child", type: textarea, show_if: { name: inBlock, value: "да" }, label: { ru: "Вы будете жить в Rooms с ребёнком?", en: "Will a child stay with you at Rooms?" }, hint: { ru: "Если да — сколько детей и сколько им лет. Условия для детей уточним после договора с отелем", en: "If so, how many children and their ages. Terms for children will be confirmed once the hotel contract is signed" } }
         - type: note
-          text: { ru: "Номер в Rooms Kazbegi бронируют организаторы — по групповому тарифу. Проживание оплачивается напрямую отелю при заезде, к цене добавляется НДС 18%.", en: "The organisers hold your room at Rooms Kazbegi at the group rate. You pay for your stay directly to the hotel at check-in, plus 18% VAT." }
+          text: { ru: "Номер в Rooms Kazbegi по групповому тарифу бронируют организаторы. Как и когда оплачивать проживание, мы напишем в письме после подтверждения заявки. К цене номера добавляется НДС 18%.", en: "The organisers book your room at Rooms Kazbegi at the group rate. We will tell you how and when to pay for your stay in the email after your application is confirmed. 18% VAT is added to the room price." }
     - title: { ru: "Активности и условия", en: "Activities & terms" }
       intro: { ru: "Последний шаг.", en: "The last step." }
       fields:
-        - { name: kids, entry: "496575736", type: fixed, value: "Нет" }   # детского клуба нет; вопрос обязателен в форме 2026 — отвечаем сами (в форме 2027 его стоит убрать)
-        - { name: activitiesWanted, entry: "2093172798", type: radio, options: yes_no, label: { ru: "Интересны совместные активности, которые можно организовать заранее?", en: "Interested in shared activities we can arrange in advance?" } }
         - name: activities
-          entry: "157482944"
+          entry: "k27_activities"
           type: checkboxes
-          show_if: { name: activitiesWanted, value: "Да" }
-          label: { ru: "Какие активности вам интересны?", en: "Which activities interest you?" }
+          show_if: { name: hasRetreat, value: "да" }
+          label: { ru: "Какие совместные активности вам интересны?", en: "Which shared activities interest you?" }
+          hint: { ru: "Их можно организовать заранее. Можно ничего не выбирать", en: "We can arrange them in advance. You can leave this empty" }
           options:
             - { v: "Поездка на внедорожниках к достопримечательностям", ru: "Поездка на внедорожниках к достопримечательностям", en: "Off-road trip to the sights" }
             - { v: "Конная прогулка по горам", ru: "Конная прогулка по горам", en: "Horse ride in the mountains" }
@@ -725,5 +734,23 @@ form:
             - { v: "Прогулки по ближайшим деревням", ru: "Прогулки по ближайшим деревням", en: "Walks to nearby villages" }
             - { v: "Предложу свой вариант в чате", ru: "Предложу свой вариант в чате", en: "I’ll suggest my own in the chat" }
           other: { ru: "Другое", en: "Other" }
-        - { name: propose, entry: "1874340831", type: textarea, label: { ru: "Хотите предложить или провести какую-то активность?", en: "Would you like to offer or lead an activity?" }, hint: { ru: "Коротко: что это и с чем нужна помощь", en: "Briefly: what it is and what help you need" } }
-        - { name: consent, entry: "1828670316", type: consent, required: true, value: "Я ОЗНАКОМЛЕН С УСЛОВИЯМИ УЧАСТИЯ В РЕТРИТЕ И ПРИНИМАЮ ИХ", text: { ru: "Я принимаю [условия участия в ретрите]({rules})", en: "I accept the [retreat terms and rules]({rules})" } }
+        - { name: propose, entry: "k27_propose", type: textarea, show_if: { name: hasRetreat, value: "да" }, label: { ru: "Хотите предложить или провести какую-то активность?", en: "Would you like to offer or lead an activity?" }, hint: { ru: "Коротко: что это и с чем нужна помощь", en: "Briefly: what it is and what help you need" } }
+        - name: diet
+          entry: "k27_diet"
+          type: radio
+          label: { ru: "Какое питание вам подходит?", en: "What food suits you?" }
+          options:
+            - { v: "Без ограничений", ru: "Без ограничений", en: "No restrictions" }
+            - { v: "Вегетарианское", ru: "Вегетарианское", en: "Vegetarian" }
+            - { v: "Веганское", ru: "Веганское", en: "Vegan" }
+            - { v: "Другое", ru: "Другое — напишу ниже", en: "Other — I’ll write below" }
+        - { name: dietNote, entry: "k27_dietNote", type: textarea, label: { ru: "Аллергии, непереносимости или другое питание", en: "Allergies, intolerances or other dietary needs" }, hint: { ru: "Если ничего — оставьте пустым", en: "If none, leave this empty" } }
+        - { name: consent_terms, entry: "k27_consent_terms", type: consent, required: true, value: "Я ознакомлен(а) с Правилами участия 2027 и принимаю их", text: { ru: "Я ознакомлен(а) с [Правилами участия 2027]({rules}) и принимаю их", en: "I have read and accept the [2027 participation rules]({rules})" } }
+        - name: consent_noshow
+          entry: "k27_consent_noshow"
+          type: consent
+          required: true
+          value: "Понимаю и согласен(на): если номер в Rooms бронируют для меня организаторы, отменить его можно только заменой имени гостя — иначе оплаченные ночи не возвращаются; при неявке или поздней отмене полную стоимость проживания по счёту отеля оплачиваю я."
+          text:
+            ru: "Понимаю и согласен(на): если номер в Rooms бронируют для меня организаторы, отменить его можно только заменой имени гостя — иначе оплаченные ночи не возвращаются; при неявке или поздней отмене полную стоимость проживания по счёту отеля оплачиваю я."
+            en: "I understand and agree: if the organisers book a room at Rooms for me, it can only be cancelled by replacing the guest’s name — otherwise the paid nights are not refunded; for a no-show or a late cancellation I pay the full cost of the stay as invoiced by the hotel."
