@@ -227,8 +227,8 @@ intensive:
   note: { ru: "Если запишется меньше 15 человек, интенсив не состоится — оплату вернём целиком.", en: "If fewer than 15 people sign up, the intensive won’t take place and we’ll refund the payment in full." }
   facts:                       # пустое значение — «уточняется»
     - { label: { ru: "Даты", en: "Dates" }, value: { ru: "{intensive_dates}", en: "{intensive_dates}" } }
-    - { label: { ru: "Для кого", en: "Who it’s for" }, value: { ru: "Для участников ретрита и для тех, кто приедет только на интенсив", en: "For retreat participants and for those coming for the intensive only" } }
-    - { label: { ru: "Стоимость", en: "Price" }, value: { ru: "400 € — участникам ретрита · 550 € — только интенсив", en: "€400 for retreat participants · €550 for the intensive only" } }
+    - { label: { ru: "Для кого", en: "Who it’s for" }, value: { ru: "Для всех, кто едет на интенсив — с ретритом или отдельно", en: "For everyone coming to the intensive — with the retreat or on its own" } }
+    - { label: { ru: "Стоимость", en: "Price" }, value: { ru: "400 € — с ретритом, если интенсив забронирован до 30.04.2027 включительно (сразу или добавлен к заявке позже) · 550 € — после 30.04.2027 или только интенсив", en: "€400 with the retreat, if the intensive is booked by 30 April 2027 inclusive (right away or added to your application later) · €550 after 30 April 2027 or for the intensive only" } }
     - { label: { ru: "Состоится", en: "Goes ahead" }, value: { ru: "от 15 участников, иначе — полный возврат", en: "with at least 15 participants, otherwise a full refund" } }
     - { label: { ru: "Проживание", en: "Accommodation" }, value: { ru: "Ночи 20–23 июля, выезд {intensive_checkout}", en: "Nights of 20–23 July, check-out on {intensive_checkout}" } }
 
@@ -414,7 +414,7 @@ pricing:
     - { ru: "Вечерние костры", en: "Evening bonfires" }
     - { ru: "Одно совместное барбекю", en: "One shared barbecue" }
   list:
-    - { ru: "Оплата в течение 7 дней после подтверждения заявки — криптовалюта или перевод в евро, долларах, рублях", en: "Payment within 7 days of your application being confirmed — crypto or a transfer in euros, dollars or roubles" }
+    - { ru: "Оплата в течение 10 дней после подтверждения заявки — криптовалюта или перевод в евро, долларах, рублях", en: "Payment within 10 days of your application being confirmed — crypto or a transfer in euros, dollars or roubles" }
     - { ru: "Планируется только вживую, без онлайн-трансляции", en: "Planned in person only, no live stream" }
   fine: { ru: "Проживание — отдельно, напрямую отелю. Массаж и дополнительные активности — за отдельную плату.", en: "Accommodation is separate, paid directly to the hotel. Massage and optional activities are paid separately." }
   stay_hint: { ru: "Проживание в Rooms Kazbegi — от {rooms_from} $ за номер за ночь, плюс НДС 18%. Оплата — отелю при заезде.", en: "Rooms at Rooms Kazbegi — from ${rooms_from} per room per night, plus 18% VAT, paid to the hotel at check-in." }
@@ -422,22 +422,30 @@ pricing:
     tag: { ru: "Rooms Kazbegi · {intensive_dates}", en: "Rooms Kazbegi · {intensive_dates}" }
     title: { ru: "Интенсив", en: "Intensive" }
     prices:                    # одна или несколько цен; price пусто — «уточняется»
-      - { label: { ru: "Участникам ретрита", en: "Retreat participants" }, price: 400 }
-      - { label: { ru: "Только интенсив", en: "Intensive only" }, price: 550 }
+      - { label: { ru: "С ретритом, интенсив забронирован до 30.04.2027 (сразу или добавлен позже)", en: "With the retreat, intensive booked by 30 April 2027 (right away or added later)" }, price: 400 }
+      - { label: { ru: "После 30.04.2027 или только интенсив", en: "After 30 April 2027, or the intensive only" }, price: 550 }
     list:
       - { ru: "Три дня углублённой практики с Мастером: 20 июля — 4 ч, 21 июля — 6 ч, 22 июля — 5 ч", en: "Three days of deeper practice with the Master: 20 July — 4 h, 21 July — 6 h, 22 July — 5 h" }
       - { ru: "Можно приехать только на интенсив", en: "You can come for the intensive only" }
       - { ru: "Меньше 15 участников — интенсив не проводим и возвращаем оплату целиком", en: "Fewer than 15 participants — the intensive doesn’t run and payments are refunded in full" }
       - { ru: "Проживание — Rooms Kazbegi по групповому тарифу, Rooms Kazbegi напрямую или другое размещение рядом", en: "Accommodation — Rooms Kazbegi at the group rate, Rooms Kazbegi booked directly, or other accommodation nearby" }
-  private: { ru: "100 € / час или 50 € / 30 минут", en: "€100 per hour or €50 per 30 minutes" }
+  private: { ru: "50 € за 30 минут · одна сессия на человека", en: "€50 per 30 minutes · one session per person" }
   refund_title: { ru: "Отмена и возврат", en: "Cancellation and refunds" }
   refund:                      # один текст — на главной и в FAQ
     ru: |
       Если вы оплатили участие, но не можете поехать:
 
-      - более чем за 3 месяца до начала — возвращается 100%;
-      - за 2–3 месяца — 50%;
-      - менее чем за 2 месяца — оплата не возвращается.
+      Участие в ретрите:
+      - до 11.04.2027 включительно — возвращается 100%;
+      - с 12.04.2027 по 11.05.2027 — 50%;
+      - с 12.05.2027 — оплата не возвращается.
+
+      Интенсив:
+      - до 19.04.2027 включительно — возвращается 100%;
+      - с 20.04.2027 по 19.05.2027 — 50%;
+      - с 20.05.2027 — оплата не возвращается.
+
+      Срок считается по дню, когда мы получили ваше уведомление. Комиссию банка или сети за возврат оплачиваете вы: она вычитается из суммы возврата.
 
       Если до 1 марта 2027 года наберётся недостаточно участников, ретрит отменяется и все деньги возвращаются полностью.
 
@@ -447,9 +455,17 @@ pricing:
     en: |
       If you have paid but can’t come:
 
-      - more than 3 months before the start — 100% refund;
-      - 2–3 months before — 50% refund;
-      - less than 2 months before — no refund.
+      Retreat participation:
+      - until 11 April 2027 inclusive — 100% refund;
+      - 12 April to 11 May 2027 — 50% refund;
+      - from 12 May 2027 — no refund.
+
+      Intensive:
+      - until 19 April 2027 inclusive — 100% refund;
+      - 20 April to 19 May 2027 — 50% refund;
+      - from 20 May 2027 — no refund.
+
+      The period is counted from the day we receive your notice. The bank or network fee for the refund is paid by you and deducted from the refund.
 
       If there are not enough participants by 1 March 2027, the retreat is cancelled and all payments are refunded in full.
 
@@ -469,7 +485,7 @@ join:
     - { title: { ru: "Заполните заявку", en: "Fill in the application" }, text: { ru: "Анкета на сайте — 4 коротких шага", en: "The form on this site — 4 short steps" } }
     - { title: { ru: "Поговорите с командой организаторов", en: "Talk to the organising team" }, text: { ru: "Обязательно для всех новичков", en: "Required for all newcomers" } }
     - { title: { ru: "Получите подтверждение участия", en: "Get your place confirmed" }, text: { ru: "И реквизиты для оплаты", en: "Along with payment details" } }
-    - { title: { ru: "Оплатите участие", en: "Make the payment" }, text: { ru: "В течение 7 дней. Проживание — напрямую отелю при заезде", en: "Within 7 days. Accommodation is paid to the hotel at check-in" } }
+    - { title: { ru: "Оплатите участие", en: "Make the payment" }, text: { ru: "В течение 10 дней. Проживание — напрямую отелю при заезде", en: "Within 10 days. Accommodation is paid to the hotel at check-in" } }
     - { title: { ru: "Получите подтверждение брони", en: "Receive your booking confirmation" }, text: { ru: "Места участника и номера в Rooms, если живёте там", en: "For your place, and your room at Rooms if you stay there" } }
     - { title: { ru: "Добро пожаловать в чат участников", en: "Welcome to the participants’ chat" }, text: { ru: "Там все новости и детали перед поездкой", en: "All the news and details before the trip" } }
 
@@ -516,7 +532,7 @@ faq:
 
             **Your room at Rooms Kazbegi:** directly to the hotel at check-in, plus 18% VAT.
       - q: { ru: "Какие условия частных занятий с Мастером?", en: "What about private sessions with the Master?" }
-        a: { ru: "Такая возможность может появиться при предварительной организации. Если занятие состоится, оно оплачивается отдельно: {private}.", en: "This may be possible if arranged in advance. If a session takes place, it is paid separately: {private}." }
+        a: { ru: "Такая возможность может появиться при предварительной организации. Если занятие состоится, оно оплачивается отдельно: {private}. Тем, кто едет и на интенсив, просим записываться на дни интенсива.", en: "This may be possible if arranged in advance. If a session takes place, it is paid separately: {private}. If you are also coming to the intensive, please book on the intensive days." }
       - q: { ru: "Какие условия возврата?", en: "What is the refund policy?" }
         a: refund              # тот же текст, что в блоке «Отмена и возврат» на главной
       - q: { ru: "Сколько стоят дополнительные активности?", en: "How much do the optional activities cost?" }
@@ -554,7 +570,7 @@ faq:
       - q: { ru: "Будет ли онлайн-трансляция?", en: "Will there be a live stream?" }
         a: { ru: "Нет: ретрит и интенсив планируются только вживую. Присутствие Мастера, общее поле и ритм практики — в зале, а не на экране.", en: "No: the retreat and the intensive are planned in person only. The Master’s presence, the shared field and the rhythm of practice happen in the hall, not on a screen." }
       - q: { ru: "Можно приехать только на интенсив?", en: "Can I come for the intensive only?" }
-        a: { ru: "Да. Интенсив — {intensive_dates}: 400 € для участников ретрита, 550 € — только интенсив. Если запишется меньше 15 человек, интенсив не состоится, и мы вернём оплату целиком.", en: "Yes. The intensive runs {intensive_dates}: €400 for retreat participants, €550 for the intensive only. If fewer than 15 people sign up, it won’t take place and we’ll refund the payment in full." }
+        a: { ru: "Да. Интенсив — {intensive_dates}: 400 €, если вы едете и на ретрит, и на интенсив и бронируете интенсив до 30.04.2027 включительно — сразу в заявке или добавив его к своей заявке позже; 550 € — после 30.04.2027 или если вы едете только на интенсив. Если запишется меньше 15 человек, интенсив не состоится, и мы вернём оплату целиком.", en: "Yes. The intensive runs {intensive_dates}: €400 if you come to both the retreat and the intensive and book the intensive by 30 April 2027 inclusive — right in your application or by adding it to your application later; €550 after 30 April 2027 or if you come for the intensive only. If fewer than 15 people sign up, it won’t take place and we’ll refund the payment in full." }
       - q: { ru: "Где жить на интенсиве?", en: "Where do I stay for the intensive?" }
         a: { ru: "Как и на ретрите: Rooms Kazbegi по групповому тарифу, Rooms Kazbegi с бронированием напрямую или другое размещение рядом.", en: "As for the retreat: Rooms Kazbegi at the group rate, Rooms Kazbegi booked directly, or other accommodation nearby." }
       - q: { ru: "Почему ретрит могут отменить?", en: "Why might the retreat be cancelled?" }
