@@ -89,5 +89,5 @@ name_en: Application
       "telegram": {{ g_telegram | jsonify }},
       "rooms_from": {{ g_rooms_from | jsonify }}
     },
-    "dates": { "arrival": {{ R.retreat.checkin.date | jsonify }}, "departure": {{ R.retreat.checkout.date | jsonify }} }
+    "dates": { "arrival": {{ R.retreat.checkin.date | jsonify }}, "departure": {{ R.retreat.checkout.date | jsonify }}, "intensive_arrival": {{ R.intensive.start | jsonify }}, "intensive_departure": {{ R.intensive.checkout.date | jsonify }} }
   }</script>

@@ -86,6 +86,10 @@
   var card = $('.form-card');
   var allFields = [];
   var dA = (CFG.dates && CFG.dates.arrival) || '', dD = (CFG.dates && CFG.dates.departure) || '';
+  var iA = (CFG.dates && CFG.dates.intensive_arrival) || dA, iD = (CFG.dates && CFG.dates.intensive_departure) || dD;
+  var datesTouched = false; // человек сам менял даты — выбор участия их больше не перетирает
+  // даты по выбору участия: «Ретрит» — даты ретрита, «Ретрит и интенсив» — до конца интенсива, «Только интенсив» — даты интенсива
+  var PROGRAM_DATES = { 'Ретрит': [dA, dD], 'Ретрит и интенсив': [dA, iD], 'Только интенсив': [iA, iD] };
   function shiftMonths(iso, n) { if (!iso) return ''; var d = new Date(iso + 'T12:00:00'); d.setMonth(d.getMonth() + n); return d.toISOString().slice(0, 10); }
 
   function fieldHTML(f) {
@@ -120,7 +124,7 @@
         html += '<input class="input other-input" name="' + f.name + '_other" type="text" hidden data-ph-ru="' + UI.otherPh.ru + '" data-ph-en="' + UI.otherPh.en + '" placeholder="' + UI.otherPh.ru + '">';
       }
     } else if (f.type === 'dates') {
-      var mn = shiftMonths(dA, -2), mx = shiftMonths(dD, 2);
+      var mn = shiftMonths(dA, -2), mx = shiftMonths(iD > dD ? iD : dD, 2);
       html += '<p class="field__label" id="l-' + f.name + '">' + L(f.label) + req + '</p>' + hint +
         '<div class="dates" role="group" aria-labelledby="l-' + f.name + '">' +
         '<label><span>' + L(UI.arrival) + '</span><input class="input" type="date" name="arrival" value="' + dA + '" min="' + mn + '" max="' + mx + '"></label>' +
@@ -175,6 +179,14 @@
     }
     if (f.type === 'consent') return form.elements[f.name].checked ? f.value : '';
     return (form.elements[f.name].value || '').trim();
+  }
+  function applyProgramDates() {
+    if (datesTouched || !form.elements.arrival) return;
+    var c = form.querySelector('input[name="program"]:checked');
+    var r = c && PROGRAM_DATES[c.value];
+    if (!r || !r[0] || !r[1]) return;
+    form.elements.arrival.value = r[0];
+    form.elements.departure.value = r[1];
   }
   function otherText(f) { var el = form.elements[f.name + '_other']; return el ? el.value.trim() : ''; }
   function isVisible(f) {
@@ -270,12 +282,14 @@
       } else data[el.name] = el.value;
     });
     data.__step = current;
+    data.__datesTouched = datesTouched;
     try { localStorage.setItem(DRAFT_KEY, JSON.stringify(data)); } catch (e) { /* ignore */ }
   }
   function restoreDraft() {
     var data;
     try { data = JSON.parse(localStorage.getItem(DRAFT_KEY) || 'null'); } catch (e) { data = null; }
     if (!data) return;
+    datesTouched = data.__datesTouched === true;
     $$('input, textarea', form).forEach(function (el) {
       if (!el.name || !(el.name in data)) return;
       var v = data[el.name];
@@ -284,8 +298,21 @@
       else el.value = v;
     });
   }
-  form.addEventListener('input', function () { updateVisibility(); saveDraft(); });
+  form.addEventListener('input', function (e) {
+    if ((e.target.name === 'arrival' || e.target.name === 'departure')) datesTouched = true;
+    updateVisibility();
+    // ошибку снимаем уже при вводе: если ждать change (blur), подсказка исчезает в момент нажатия
+    // «Далее», кнопка подпрыгивает и первый клик пропадает
+    var fieldEl = e.target.closest('[data-field]');
+    if (fieldEl && fieldEl.classList.contains('has-error')) {
+      var f = byName(fieldEl.dataset.field);
+      if (f) validateField(f);
+    }
+    saveDraft();
+  });
   form.addEventListener('change', function (e) {
+    if ((e.target.name === 'arrival' || e.target.name === 'departure')) datesTouched = true;
+    if (e.target.name === 'program') applyProgramDates();
     updateVisibility();
     var fieldEl = e.target.closest('[data-field]');
     if (fieldEl && fieldEl.classList.contains('has-error')) {
