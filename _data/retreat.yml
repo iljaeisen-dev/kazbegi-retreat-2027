@@ -24,7 +24,7 @@ site:
     sub: "Kazbegi · Georgia · 2027"
   email: "kazbegi.retreat@gmail.com"
   telegram: "Kazbegi_Retreat_bot"        # без @
-  rules_url: "https://docs.google.com/document/d/1uhkTW_Wl2Kt01I_s67hevnbW48xrJMRSRxvOOjTfRWY/preview"
+  rules_url: "https://docs.google.com/document/d/1hXUdPc1YiJaE6TXILyFeCFr5aYJ7B8aTjXZv020lStk/preview"
   method_url: ""               # сайт о методе Мастера; пусто — ссылок на него нет
   analytics:
     goatcounter: ""            # имя счётчика GoatCounter (статистика без cookie), например "kazbegi2027"
@@ -196,8 +196,8 @@ schedule:
     text: { ru: "Выезд из номеров", en: "Check-out" }
     note: { ru: "Время выезда уточним после договора с отелем.", en: "The check-out time will be confirmed once the hotel contract is signed." }
   notes:
-    - ru: "Каждый день — одна или несколько телесно-духовных практик: йога, чайная церемония, прогулки на природе. Точного расписания нет — день наполняется деталями по ходу ретрита."
-      en: "Every day includes one or more body and spirit practices: yoga, a tea ceremony, walks in nature. There is no fixed timetable — the days fill with detail as the retreat unfolds."
+    - ru: "Каждый день — одна или несколько телесно-духовных практик: йога, прогулки на природе. Точного расписания нет — день наполняется деталями по ходу ретрита."
+      en: "Every day includes one or more body and spirit practices: yoga, walks in nature. There is no fixed timetable — the days fill with detail as the retreat unfolds."
 
 # ----------------------------------------------------------------------------- интенсив; удалите блок — его не будет нигде
 intensive:
@@ -284,8 +284,8 @@ rooms:
   kicker: { ru: "Проживание", en: "Accommodation" }
   title: { ru: "Жить там, *где практикуем*", en: "Stay where *we practise*" }
   lead:
-    ru: "Для нашей группы согласованы специальные цены на номера с завтраком — до 37 % ниже открытых цен отеля на те же даты. Номер бронируют организаторы, проживание оплачивается напрямую отелю при заезде."
-    en: "Special rates have been agreed for our group on rooms with breakfast — up to 37% below the hotel’s public prices for the same dates. We hold the room for you, and you pay for your stay directly to the hotel at check-in."
+    ru: "Для нашей группы согласованы специальные цены на номера с завтраком — до 37 % ниже открытых цен отеля на те же даты. Номер бронируют организаторы. Предоплата — 25 % ночей номера — гарантирует вашу бронь у отеля, остальное вы платите отелю на месте."
+    en: "Special rates have been agreed for our group on rooms with breakfast — up to 37% below the hotel’s public prices for the same dates. We book the room for you. A prepayment of 25% of the room’s nights guarantees your booking with the hotel, and you pay the rest to the hotel on site."
   options:                     # где можно жить — и на ретрите, и на интенсиве
     - title: { ru: "Rooms Kazbegi — по групповому тарифу ретрита", en: "Rooms Kazbegi — at the retreat group rate" }
       text: { ru: "Укажите в анкете категорию номера и даты — организаторы забронируют номер по групповому тарифу.", en: "Give the room category and dates in the application, and the organisers will book the room at the group rate." }
@@ -327,17 +327,17 @@ rooms:
     ru: "Цены в карточках — групповой тариф ретрита, а не цены с сайта отеля: до 37 % ниже открытых цен на те же даты. В долларах, за номер за ночь, завтрак включён: первая цифра — для одного гостя, вторая — для двоих. Официальные ночи ретрита — с {checkin} по {checkout} ({nights} ночей), дополнительные ночи до и после — по тем же ценам."
     en: "The prices on the cards are the retreat group rate, not the hotel website’s prices — up to 37% below the public prices for the same dates. In US dollars, per room per night, breakfast included: the first figure is for one guest, the second for two. The official retreat nights are {checkin} to {checkout} ({nights} nights); extra nights before and after are at the same rates."
   payment:                     # как платить за проживание — заметным блоком
-    ru: "Вы оплачиваете проживание напрямую отелю при заезде. Цены указаны за номер за ночь, завтрак включён, к цене добавляется НДС 18%. Для бронирования номера укажите в анкете категорию и даты. До какого числа номер держится за группой, уточняется. Участие в ретрите оплачивается отдельно, организатору."
-    en: "You pay for your stay directly to the hotel at check-in. Prices are per room per night, breakfast included, plus 18% VAT. To have a room held for you, give the category and dates in the application. How long rooms are held for the group is to be confirmed. The retreat fee is paid separately, to the organiser."
+    ru: "Проживание оплачивается в два этапа. Предоплата — 25 % ночей вашего номера (округляем вверх: при 9 ночах это 3 ночи) — вносится нам вместе с оплатой участия, в течение 10 дней после подтверждения заявки. Мы переводим её отелю, и она гарантирует вашу бронь в групповом блоке. Остальное вы оплачиваете отелю на месте. Если вы отменяете номер до 11.05.2027 включительно, предоплата возвращается полностью; с 12.05.2027 она уже у отеля и не возвращается. Цены — за номер за ночь, завтрак включён, плюс НДС 18%. Чтобы мы забронировали номер, укажите в анкете категорию и даты."
+    en: "Your stay is paid in two parts. A prepayment of 25% of your room’s nights (rounded up: for 9 nights that is 3 nights) is paid to us together with the retreat fee, within 10 days of your application being confirmed. We pass it to the hotel, and it guarantees your booking in the group block. You pay the rest to the hotel on site. If you cancel the room by 11 May 2027 inclusive, the prepayment is refunded in full; from 12 May 2027 it is already with the hotel and is not refunded. Prices are per room per night, breakfast included, plus 18% VAT. To have us book a room for you, give the category and dates in the application."
   steps:                       # только для through_us: как идёт бронь
     - { ru: "В анкете укажите, что хотите жить в Rooms, категорию номера и даты", en: "In the application, say you’d like to stay at Rooms and give the room category and dates" }
     - { ru: "Организаторы бронируют номер по групповому тарифу", en: "The organisers book the room at the group rate" }
-    - { ru: "Оплата — напрямую отелю при заезде, плюс НДС 18%", en: "Payment — directly to the hotel at check-in, plus 18% VAT" }
+    - { ru: "Предоплата 25 % ночей — нам, вместе с участием; остальное — отелю на месте. Плюс НДС 18%", en: "A 25% prepayment of the nights — to us, with the retreat fee; the rest — to the hotel on site. Plus 18% VAT" }
   info:                        # пустой text — «уточняется»
     - title: { ru: "Отмена и возврат проживания", en: "Room cancellation and refunds" }
-      text: ""                 # после Group Agreement с отелем
+      text: { ru: "До 11.05.2027 включительно номер можно отменить, и предоплата возвращается полностью. С 12.05.2027 предоплата уже у отеля: номер можно отменить только заменой имени — переписав его на другого гостя, иначе предоплаченные ночи не возвращаются. При неявке или поздней отмене полную стоимость проживания по счёту отеля оплачиваете вы. Если сосед по номеру не приедет, номер остаётся за вами.", en: "Until 11 May 2027 inclusive, the room can be cancelled and the prepayment is refunded in full. From 12 May 2027 the prepayment is with the hotel: the room can only be cancelled by replacing the guest’s name — passing it to another guest — otherwise the prepaid nights are not refunded. For a no-show or a late cancellation, you pay the full cost of the stay on the hotel’s bill. If your roommate doesn’t come, the room stays yours." }   # Илья 25.11 + письмо Ани 20.11 + confirm_room; ответа Ани на 25 % ещё нет
     - title: { ru: "Доп. кровати и дети", en: "Extra beds and children" }
-      text: ""                 # после Group Agreement с отелем
+      text: { ru: "Дополнительная кровать — 10 $ за ночь плюс НДС 18%, отметьте это в анкете. Дети могут приехать с родителями, но на практиках не присутствуют; детской программы и присмотра организаторы не организуют.", en: "An extra bed is $10 per night plus 18% VAT — mark it in the application. Children may come with their parents but do not attend the sessions; the organisers do not provide a children’s programme or childcare." }   # 10 $ = цена 2026 (hotel-baseline-2026), на 2027 у отеля не спрашивали
     - title: { ru: "Питание", en: "Meals" }
       text: { ru: "Завтрак входит в проживание. Обед и ужин — в ресторане отеля или в кафе посёлка.", en: "Breakfast is included. Lunch and dinner at the hotel restaurant or in the village cafés." }
   link: { url: "https://drive.google.com/drive/folders/177Qdydk48egib21E2DL-T3Oa7qNrJIGa?usp=sharing", label: { ru: "Все фото номеров", en: "All room photos" } }
@@ -378,7 +378,6 @@ cocreate:
   chips:
     - { ru: "Музыка", en: "Music" }
     - { ru: "Вечера у костра", en: "Evenings by the fire" }
-    - { ru: "Чайные церемонии", en: "Tea ceremonies" }
     - { ru: "Настольные игры", en: "Board games" }
     - { ru: "Мастермайнды", en: "Masterminds" }
     - { ru: "Лекции", en: "Talks" }
@@ -388,7 +387,7 @@ cocreate:
 pricing:
   kicker: { ru: "Стоимость", en: "Pricing" }
   title: { ru: "Стоимость *участия*", en: "The *price*" }
-  lead: { ru: "Участие — одной суммой, цена зависит от даты оплаты. Реквизиты пришлём после подтверждения заявки. Проживание оплачивается отдельно — напрямую отелю.", en: "One fee for the retreat; the price depends on when you pay. Payment details are sent once your application is confirmed. Accommodation is paid separately, directly to the hotel." }
+  lead: { ru: "Участие — одной суммой, цена зависит от даты оплаты. Реквизиты пришлём после подтверждения заявки. Проживание — отдельно: предоплата 25 % ночей вместе с участием, остальное — отелю на месте.", en: "One fee for the retreat; the price depends on when you pay. Payment details are sent once your application is confirmed. Accommodation is separate: a 25% prepayment of the nights with the retreat fee, the rest to the hotel on site." }
   tag: { ru: "Rooms Kazbegi · {dates_short}", en: "Rooms Kazbegi · {dates_short}" }
   plan_title: { ru: "Участие в ретрите", en: "Retreat fee" }
   currency: "€"
@@ -411,8 +410,8 @@ pricing:
   list:
     - { ru: "Оплата в течение 10 дней после подтверждения заявки: USDT (сеть TRON или TON) или USDC (сеть Ethereum) — основной способ, без доплаты; банковский перевод в евро — без доплаты; в долларах, рублях, другой валюте и через PayPal — с доплатой 10 % от суммы в евро.", en: "Payment within 10 days of your application being confirmed: USDT (TRON or TON network) or USDC (Ethereum network) — the main way, no surcharge; bank transfer in euros — no surcharge; in US dollars, roubles, another currency or via PayPal — with a 10% surcharge on the euro amount." }
     - { ru: "Планируется только вживую, без онлайн-трансляции", en: "Planned in person only, no live stream" }
-  fine: { ru: "Проживание — отдельно, напрямую отелю. Массаж и дополнительные активности — за отдельную плату.", en: "Accommodation is separate, paid directly to the hotel. Massage and optional activities are paid separately." }
-  stay_hint: { ru: "Проживание в Rooms Kazbegi — от {rooms_from} $ за номер за ночь, плюс НДС 18%. Оплата — отелю при заезде.", en: "Rooms at Rooms Kazbegi — from ${rooms_from} per room per night, plus 18% VAT, paid to the hotel at check-in." }
+  fine: { ru: "Проживание — отдельно: предоплата 25 % ночей через нас, остальное — отелю на месте. Массаж и дополнительные активности — за отдельную плату.", en: "Accommodation is separate: a 25% prepayment of the nights through us, the rest to the hotel on site. Massage and optional activities are paid separately." }
+  stay_hint: { ru: "Проживание в Rooms Kazbegi — от {rooms_from} $ за номер за ночь, плюс НДС 18%. Предоплата 25 % ночей — через нас, остальное — отелю на месте.", en: "Rooms at Rooms Kazbegi — from ${rooms_from} per room per night, plus 18% VAT. A 25% prepayment of the nights goes through us, the rest is paid to the hotel on site." }
   intensive:                   # карточка интенсива рядом с ценой ретрита
     tag: { ru: "Rooms Kazbegi · {intensive_dates}", en: "Rooms Kazbegi · {intensive_dates}" }
     title: { ru: "Интенсив", en: "Intensive" }
@@ -444,6 +443,8 @@ pricing:
 
       Возвращаем ровно ту сумму, что пришла к нам, в той же валюте, в течение 14 дней после получения вашего уведомления.
 
+      Проживание: предоплата за номер (25 % ночей) при отмене до 11.05.2027 включительно возвращается полностью. С 12.05.2027 она уже у отеля и не возвращается — номер можно отменить только заменой имени гостя; при неявке или поздней отмене полную стоимость проживания по счёту отеля оплачиваете вы.
+
       Если до 1 марта 2027 года наберётся недостаточно участников, ретрит отменяется и все деньги возвращаются полностью.
 
       Если Мастер или кто-то из организаторов не сможет провести ретрит, а также при форс-мажоре стоимость возвращается за вычетом прямых расходов (аренда зала, дорога Мастера и т. д.).
@@ -466,6 +467,8 @@ pricing:
 
       We refund exactly the amount we received, in the same currency, within 14 days of receiving your notice.
 
+      Accommodation: the room prepayment (25% of the nights) is refunded in full if you cancel by 11 May 2027 inclusive. From 12 May 2027 it is with the hotel and is not refunded — the room can then only be cancelled by replacing the guest’s name; for a no-show or a late cancellation, you pay the full cost of the stay on the hotel’s bill.
+
       If there are not enough participants by 1 March 2027, the retreat is cancelled and all payments are refunded in full.
 
       If the Master or one of the organisers is unable to hold the retreat, or in case of force majeure, the fee is refunded minus direct costs (venue rental, the Master’s travel, etc.).
@@ -484,7 +487,7 @@ join:
     - { title: { ru: "Заполните заявку", en: "Fill in the application" }, text: { ru: "Анкета на сайте — 4 коротких шага", en: "The form on this site — 4 short steps" } }
     - { title: { ru: "Поговорите с командой организаторов", en: "Talk to the organising team" }, text: { ru: "Обязательно для всех новичков", en: "Required for all newcomers" } }
     - { title: { ru: "Получите подтверждение участия", en: "Get your place confirmed" }, text: { ru: "И реквизиты для оплаты", en: "Along with payment details" } }
-    - { title: { ru: "Оплатите участие", en: "Make the payment" }, text: { ru: "В течение 10 дней. Проживание — напрямую отелю при заезде", en: "Within 10 days. Accommodation is paid to the hotel at check-in" } }
+    - { title: { ru: "Оплатите участие", en: "Make the payment" }, text: { ru: "В течение 10 дней — участие и предоплата за номер (25 % ночей). Остальное за номер — отелю на месте", en: "Within 10 days — the retreat fee and the room prepayment (25% of the nights). The rest for the room — to the hotel on site" } }
     - { title: { ru: "Получите подтверждение брони", en: "Receive your booking confirmation" }, text: { ru: "Места участника и номера в Rooms, если живёте там", en: "For your place, and your room at Rooms if you stay there" } }
     - { title: { ru: "Добро пожаловать в чат участников", en: "Welcome to the participants’ chat" }, text: { ru: "Там все новости и детали перед поездкой", en: "All the news and details before the trip" } }
 
@@ -525,11 +528,11 @@ faq:
           ru: |
             **Участие:** в течение 10 дней после подтверждения заявки. Криптовалюта — USDT (сети TRON или TON) или USDC (сеть Ethereum), без доплаты; банковский перевод в евро — без доплаты; в долларах, рублях, другой валюте и через PayPal — с доплатой 10 % от суммы в евро. Реквизиты пришлём после подтверждения заявки.
 
-            **Проживание в Rooms Kazbegi:** напрямую отелю при заезде, к цене добавляется НДС 18%.
+            **Проживание в Rooms Kazbegi:** предоплата 25 % ночей номера — вместе с оплатой участия, она гарантирует бронь у отеля; при отмене до 11.05.2027 включительно возвращается полностью, позже — нет; остальное — отелю на месте. К цене добавляется НДС 18%.
           en: |
             **The retreat:** within 10 days of your application being confirmed. Crypto — USDT (TRON or TON network) or USDC (Ethereum network), no surcharge; bank transfer in euros — no surcharge; in US dollars, roubles, another currency or via PayPal — with a 10% surcharge on the euro amount. Payment details are sent once your application is confirmed.
 
-            **Your room at Rooms Kazbegi:** directly to the hotel at check-in, plus 18% VAT.
+            **Your room at Rooms Kazbegi:** a prepayment of 25% of the room’s nights together with the retreat fee — it guarantees your booking with the hotel; if you cancel by 11 May 2027 inclusive it is refunded in full, later it is not; the rest is paid to the hotel on site. Plus 18% VAT.
       - q: { ru: "Какие условия частных занятий с Мастером?", en: "What about private sessions with the Master?" }
         a: { ru: "Такая возможность может появиться при предварительной организации. Если занятие состоится, оно оплачивается отдельно: {private}. Тем, кто едет и на интенсив, просим записываться на дни интенсива.", en: "This may be possible if arranged in advance. If a session takes place, it is paid separately: {private}. If you are also coming to the intensive, please book on the intensive days." }
       - q: { ru: "Какие условия возврата?", en: "What is the refund policy?" }
@@ -551,11 +554,11 @@ faq:
 
             Check-in and check-out times, early check-in and late check-out will be confirmed once the hotel contract is signed.
       - q: { ru: "Как забронировать номер или изменить бронь?", en: "How do I book a room or change a booking?" }
-        a: { ru: "Через организаторов: укажите в анкете, что хотите жить в Rooms, категорию номера и даты — организаторы забронируют номер по групповому тарифу. Проживание оплачивается напрямую отелю при заезде. Изменения брони — также через организаторов.", en: "Through the organisers: in the application, say you’d like to stay at Rooms and give the room category and dates — the organisers will book the room at the group rate. Accommodation is paid directly to the hotel at check-in. Changes to the booking also go through the organisers." }
+        a: { ru: "Через организаторов: укажите в анкете, что хотите жить в Rooms, категорию номера и даты — организаторы забронируют номер по групповому тарифу. Предоплата 25 % ночей — вместе с оплатой участия, остальное — отелю на месте. Изменения брони — также через организаторов.", en: "Through the organisers: in the application, say you’d like to stay at Rooms and give the room category and dates — the organisers will book the room at the group rate. A 25% prepayment of the nights is paid with the retreat fee, the rest to the hotel on site. Changes to the booking also go through the organisers." }
       - q: { ru: "Где посмотреть все фото номеров?", en: "Where can I see all the room photos?" }
         a: { ru: "Полная подборка — [в этой папке](https://drive.google.com/drive/folders/177Qdydk48egib21E2DL-T3Oa7qNrJIGa?usp=sharing), а описания номеров — на [сайте отеля](https://roomshotels.com/locations/kazbegi).", en: "The full set is [in this folder](https://drive.google.com/drive/folders/177Qdydk48egib21E2DL-T3Oa7qNrJIGa?usp=sharing), and the room descriptions are on the [hotel website](https://roomshotels.com/locations/kazbegi)." }
       - q: { ru: "Сколько стоит проживание?", en: "How much is accommodation?" }
-        a: { ru: "От {rooms_from} $ за номер за ночь плюс НДС 18%, завтрак включён. Все цены — на странице [«Проживание»](stay.html). Оплата — напрямую отелю при заезде.", en: "From ${rooms_from} per room per night plus 18% VAT, breakfast included. All prices are on the [Accommodation](stay.html) page. You pay the hotel directly at check-in." }
+        a: { ru: "От {rooms_from} $ за номер за ночь плюс НДС 18%, завтрак включён. Все цены — на странице [«Проживание»](stay.html). Предоплата 25 % ночей — через нас, остальное — отелю на месте.", en: "From ${rooms_from} per room per night plus 18% VAT, breakfast included. All prices are on the [Accommodation](stay.html) page. A 25% prepayment of the nights goes through us, the rest is paid to the hotel on site." }
       - q: { ru: "Завтрак включён?", en: "Is breakfast included?" }
         a: { ru: "Да, завтрак включён в стоимость проживания. Буфет работает до 11:00, но и после этого можно спокойно доесть.", en: "Yes, breakfast is included in the room rate. The buffet runs until 11:00, but you can take your time finishing after that." }
       - q: { ru: "А обед и ужин?", en: "What about lunch and dinner?" }
@@ -563,7 +566,7 @@ faq:
       - q: { ru: "Что если мне не подходят условия проживания в отеле?", en: "What if the hotel doesn’t suit me?" }
         a: { ru: "Можно забронировать номер в Rooms самостоятельно на сайте отеля или выбрать гостевой дом или отель рядом — и приходить на практики и общие активности.", en: "You can book a room at Rooms yourself on the hotel website, or pick a guesthouse or hotel nearby — and come for the sessions and shared activities." }
       - q: { ru: "Можно приехать с детьми?", en: "Can I bring children?" }
-        a: { ru: "Да — отметьте это в анкете. Условия для детей и дополнительные кровати уточним после договора с отелем.", en: "Yes — mention it in the application. Terms for children and extra beds will be confirmed once the hotel contract is signed." }
+        a: { ru: "Да — отметьте это в анкете. На практиках дети не присутствуют; детской программы и присмотра (няни) организаторы не организуют. Дополнительная кровать — 10 $ за ночь плюс НДС 18%.", en: "Yes — mention it in the application. Children do not attend the sessions, and the organisers do not provide childcare or a children’s programme. An extra bed is $10 per night plus 18% VAT." }
   - title: { ru: "Организация", en: "Organisation" }
     items:
       - q: { ru: "Будет ли онлайн-трансляция?", en: "Will there be a live stream?" }
@@ -728,10 +731,10 @@ form:
             - { v: "Signature King, вид на лес", en: "Signature King, forest view" }
             - { v: "Signature King, вид на горы", en: "Signature King, mountain view" }
         - { name: roommateName, entry: "k27_roommateName", type: text, required: true, show_if: { name: shared, value: "да" }, label: { ru: "С кем вы будете жить?", en: "Who will you share with?" }, hint: { ru: "Имя и фамилия соседа — как в загранпаспорте. Если ещё не знаете с кем — напишите «пока не знаю»", en: "Your roommate’s first and last name, exactly as in their passport. If you don’t know yet, write “not yet”" } }
-        - { name: extraBed, entry: "k27_extraBed", type: radio, options: yes_no, show_if: { name: inBlock, value: "да" }, label: { ru: "Нужна дополнительная кровать?", en: "Do you need an extra bed?" } }
-        - { name: child, entry: "k27_child", type: textarea, show_if: { name: inBlock, value: "да" }, label: { ru: "Вы будете жить в Rooms с ребёнком?", en: "Will a child stay with you at Rooms?" }, hint: { ru: "Если да — сколько детей и сколько им лет. Условия для детей уточним после договора с отелем", en: "If so, how many children and their ages. Terms for children will be confirmed once the hotel contract is signed" } }
+        - { name: extraBed, entry: "k27_extraBed", type: radio, options: yes_no, show_if: { name: inBlock, value: "да" }, label: { ru: "Нужна дополнительная кровать (10 $ за ночь плюс НДС 18%)?", en: "Do you need an extra bed ($10 per night plus 18% VAT)?" } }
+        - { name: child, entry: "k27_child", type: textarea, show_if: { name: inBlock, value: "да" }, label: { ru: "Вы будете жить в Rooms с ребёнком?", en: "Will a child stay with you at Rooms?" }, hint: { ru: "Если да — сколько детей и сколько им лет. На практиках дети не присутствуют; присмотра организаторы не организуют", en: "If so, how many children and their ages. Children do not attend the sessions; the organisers do not provide childcare" } }
         - type: note
-          text: { ru: "Номер в Rooms Kazbegi по групповому тарифу бронируют организаторы. Как и когда оплачивать проживание, мы напишем в письме после подтверждения заявки. К цене номера добавляется НДС 18%.", en: "The organisers book your room at Rooms Kazbegi at the group rate. We will tell you how and when to pay for your stay in the email after your application is confirmed. 18% VAT is added to the room price." }
+          text: { ru: "Номер в Rooms Kazbegi по групповому тарифу бронируют организаторы. Предоплата — 25 % ночей номера — вносится вместе с оплатой участия, гарантирует бронь у отеля; при отмене до 11.05.2027 включительно возвращается полностью, позже — нет; остальное вы платите отелю на месте. Счёт пришлём в письме после подтверждения заявки. К цене номера добавляется НДС 18%.", en: "The organisers book your room at Rooms Kazbegi at the group rate. A prepayment of 25% of the room’s nights is paid together with the retreat fee; it guarantees your booking with the hotel; if you cancel by 11 May 2027 inclusive it is refunded in full, later it is not. You pay the rest to the hotel on site. The invoice comes in the email after your application is confirmed. 18% VAT is added to the room price." }
     - title: { ru: "Активности и условия", en: "Activities & terms" }
       intro: { ru: "Последний шаг.", en: "The last step." }
       fields:
