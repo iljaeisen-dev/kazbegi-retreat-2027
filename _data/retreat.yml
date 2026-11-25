@@ -121,17 +121,17 @@ memories:
     - { src: "memories-3.webp", pos: "62% 30%", alt: { ru: "Тишина практики", en: "The stillness of practice" } }
     - { src: "memories-4.webp", pos: "50% 70%", alt: { ru: "Отдых на лугу под горами", en: "Resting on a meadow beneath the mountains" } }
     - { src: "memories-5.webp", alt: { ru: "Практика в зале", en: "Practice in the hall" } }
-  video: ""                    # видео с прошлого ретрита: файл в assets/video/, например "memories.mp4" — появится кнопка «Смотреть видео»
-  video_poster: ""
+  video: "memories.mp4"        # видео с прошлого ретрита: файл в assets/video/, например "memories.mp4" — появится кнопка «Смотреть видео»
+  video_poster: "memories-poster.jpg"
 
 # ----------------------------------------------------------------------------- что включено: карточки из каталога practices
 included:
   kicker: { ru: "Что включено", en: "What’s included" }
   title: { ru: "Всё для *глубокого* погружения", en: "Everything for a *deep* immersion" }
   lead:
-    ru: "Практики с Мастером, поддержка наставников, йога и breathwork, вечера у огня и одно общее барбекю — чтобы каждый день был наполнен практикой, горами и живым общением."
-    en: "Sessions with the Master, mentors’ support, yoga and breathwork, evenings by the fire and one shared barbecue — so every day is filled with practice, mountains and genuine connection."
-  cards: [practice, mentors, yoga, breathwork, massage, fire, bbq]   # какие карточки показать и в каком порядке
+    ru: "Практики с Мастером, поддержка наставников, йога, вечера у огня и одно общее барбекю — чтобы каждый день был наполнен практикой, горами и живым общением."
+    en: "Sessions with the Master, mentors’ support, yoga, evenings by the fire and one shared barbecue — so every day is filled with practice, mountains and genuine connection."
+  cards: [practice, mentors, yoga, massage, fire, bbq]   # какие карточки показать и в каком порядке
 
 practices:                     # каталог карточек; lead — кто ведёт (раскрывается по нажатию)
   practice:
@@ -141,7 +141,7 @@ practices:                     # каталог карточек; lead — кт�
   mentors:
     title: { ru: "Наставничество", en: "Mentorship" }
     text: { ru: "1–2 встречи с наставником перед началом и поддержка на самом ретрите.", en: "1–2 meetings with a mentor before the start and support during the retreat." }
-    photo: { src: "card-mentors.webp", alt: { ru: "Разговор с наставником на лугу", en: "A conversation with a mentor on a meadow" } }
+    photo: { src: "card-mentors-portugal.webp", pos: "50% 40%", alt: { ru: "Беседа с наставником", en: "A conversation with a mentor" } }
   yoga:
     title: { ru: "Йога", en: "Yoga" }
     tag: { ru: "включено", en: "included" }
@@ -149,27 +149,22 @@ practices:                     # каталог карточек; lead — кт�
     more:
       ru: "Пространство, где можно перестать бороться с собой и расслабить контроль. Тело становится надёжной опорой для более глубокого внутреннего опыта."
       en: "A space to stop fighting yourself and loosen control. The body becomes a steady support for deeper inner experience."
-    lead: { name: "", about: "" }   # имя и описание ведущей — когда пришлют организаторы
-    photo: { src: "body-practice.webp", pos: "50% 60%", alt: { ru: "Утренняя практика на лугу", en: "Morning practice on a meadow" } }
-  breathwork:
-    title: { ru: "Breathwork", en: "Breathwork" }
-    tag: { ru: "включено", en: "included" }
-    text: { ru: "Осознанное связное дыхание — мост между сознательным и бессознательным.", en: "Conscious connected breathing — a bridge between the conscious and the unconscious." }
-    more:
-      ru: "Психологические и медитативные путешествия: через тело участники отпускают напряжение и эмоциональные паттерны и входят в более глубокие состояния осознанности."
-      en: "Psychological and meditative journeys: through the body, participants release tension and emotional patterns and enter deeper states of awareness."
-    lead: { name: "", about: "" }
-    photo: { src: "card-breathwork.webp", pos: "50% 35%", alt: { ru: "Медитация в зале", en: "Meditation in the hall" } }
+    lead:
+      name: { ru: "Дарья", en: "Daria" }
+      about:
+        ru: "Приветствую участников. Йога, которую я преподаю, может быть также интересна любителям воркаута. Течение практики будет зависеть от общего состояния группы."
+        en: "Welcome, everyone. The yoga I teach may also appeal to those who enjoy workouts. How the practice unfolds will depend on the overall state of the group."
+    photo: { src: "card-yoga-daria.webp", pos: "50% 45%", alt: { ru: "Йога с Дарьей", en: "Yoga with Daria" } }
   massage:
     title: { ru: "Массаж", en: "Massage" }
     tag: { ru: "за отдельную плату", en: "paid separately" }
-    text: { ru: "Каждый день — классический массаж всего тела и зонально.", en: "Every day — classic full-body and targeted massage." }
+    text: { ru: "Приём у специалиста по массажу и правкам тела — в течение всего ретрита, по записи. За отдельную плату.", en: "Sessions with a massage and body-work specialist throughout the retreat, by appointment. Paid separately." }
     lead:
       name: { ru: "Павел", en: "Pavel" }
-      about:                   # текст из Telegram пришлют организаторы
-        ru: "Работа с внутренними органами, мышцами, тканями, связками, сухожилиями и внутренними цепями. Техники настроены на разблокировку систем, восстановление кровотока, иннервации тканей и течения энергий."
-        en: "Work with the internal organs, muscles, tissues, ligaments, tendons and inner chains. The techniques unblock the body’s systems and restore circulation, the innervation of tissues and the flow of energy."
-    photo: { src: "card-massage.webp", alt: { ru: "Свет на деревянном полу", en: "Light on a wooden floor" } }
+      about:
+        ru: "Павел Козлов — сертифицированный инструктор йоги, натуропрактик, целитель, автор и ведущий курсов по оздоровлению тела, ведущий практик по гонг-медитациям, проводник по гвоздестоянию. Направления приёма: работа с внутренними органами (правка живота, висцеральный массаж); работа с мышцами, тканями, связками, сухожилиями и внутренними цепями (вакуумный массаж, суставная правка всего тела, ударно-вибрационная техника «Лад тела» петлями-нагайками); энергетические практики и очищение каналов — целение в тишине; классический расслабляющий массаж всего тела и зонально."
+        en: "Pavel Kozlov is a certified yoga instructor, naturopath and healer, author and teacher of body-health courses, a lead practitioner of gong meditations and a guide in nail-standing (gvozdestoyanie). Sessions cover: work with the internal organs (abdominal realignment, visceral massage); work with muscles, tissues, ligaments, tendons and inner chains (vacuum massage, full-body joint realignment, the percussive-vibration “Body Tune” technique with whip-loops); energy practices and channel cleansing — healing in silence; classic relaxing full-body and targeted massage."
+    photo: { src: "card-massage-pavel.webp", alt: { ru: "Павел Козлов", en: "Pavel Kozlov" } }
   fire:
     title: { ru: "Вечерние костры", en: "Evening bonfires" }
     text: { ru: "Посиделки у огня с рефлексией, музыкой и творчеством.", en: "Gatherings by the fire with reflection, music and creativity." }
@@ -189,8 +184,8 @@ schedule:
     text: { ru: "Заселение — чтобы утро {start} начать с практики", en: "Check-in — so you can start the morning of {start} with practice" }
     note: { ru: "Время заезда уточним после договора с отелем.", en: "The check-in time will be confirmed once the hotel contract is signed." }
   day:                         # master: morning / evening — значок солнца или луны
-    - { time: "07:00–08:00", what: { ru: "Йога", en: "Yoga" } }
-    - { time: "07:30–08:30", what: { ru: "Зал открыт для свободной практики", en: "The hall is open for free practice" } }
+    - { time: "07:00–08:00", what: { ru: "Йога (в зале)", en: "Yoga (in the hall)" } }
+    - { time: "08:00–08:30", what: { ru: "Зал открыт для свободной практики", en: "The hall is open for free practice" } }
     - { time: "08:30–10:00", what: { ru: "Занятие с Мастером", en: "Session with the Master" }, master: morning }
     - { time: { ru: "после занятия", en: "after the session" }, what: { ru: "Завтрак — буфет до 11:00", en: "Breakfast — the buffet is open until 11:00" } }
     - { time: { ru: "днём", en: "daytime" }, what: { ru: "Самостоятельная практика, горы, спа и совместные активности", en: "Personal practice, the mountains, the spa and shared activities" } }
@@ -201,8 +196,8 @@ schedule:
     text: { ru: "Выезд из номеров", en: "Check-out" }
     note: { ru: "Время выезда уточним после договора с отелем.", en: "The check-out time will be confirmed once the hotel contract is signed." }
   notes:
-    - ru: "Каждый день — одна или несколько телесно-духовных практик: йога, breathwork, чайная церемония, прогулки на природе. Точного расписания нет — день наполняется деталями по ходу ретрита."
-      en: "Every day includes one or more body and spirit practices: yoga, breathwork, a tea ceremony, walks in nature. There is no fixed timetable — the days fill with detail as the retreat unfolds."
+    - ru: "Каждый день — одна или несколько телесно-духовных практик: йога, чайная церемония, прогулки на природе. Точного расписания нет — день наполняется деталями по ходу ретрита."
+      en: "Every day includes one or more body and spirit practices: yoga, a tea ceremony, walks in nature. There is no fixed timetable — the days fill with detail as the retreat unfolds."
 
 # ----------------------------------------------------------------------------- интенсив; удалите блок — его не будет нигде
 intensive:
@@ -289,8 +284,8 @@ rooms:
   kicker: { ru: "Проживание", en: "Accommodation" }
   title: { ru: "Жить там, *где практикуем*", en: "Stay where *we practise*" }
   lead:
-    ru: "Для нашей группы согласованы специальные цены на номера с завтраком. Номер бронируют организаторы, проживание оплачивается напрямую отелю при заезде."
-    en: "Special rates have been agreed for our group on rooms with breakfast. We hold the room for you, and you pay for your stay directly to the hotel at check-in."
+    ru: "Для нашей группы согласованы специальные цены на номера с завтраком — до 37 % ниже открытых цен отеля на те же даты. Номер бронируют организаторы, проживание оплачивается напрямую отелю при заезде."
+    en: "Special rates have been agreed for our group on rooms with breakfast — up to 37% below the hotel’s public prices for the same dates. We hold the room for you, and you pay for your stay directly to the hotel at check-in."
   options:                     # где можно жить — и на ретрите, и на интенсиве
     - title: { ru: "Rooms Kazbegi — по групповому тарифу ретрита", en: "Rooms Kazbegi — at the retreat group rate" }
       text: { ru: "Укажите в анкете категорию номера и даты — организаторы забронируют номер по групповому тарифу.", en: "Give the room category and dates in the application, and the organisers will book the room at the group rate." }
@@ -301,12 +296,12 @@ rooms:
       text: { ru: "В гостевом доме или отеле рядом — и приходить на практики и общие активности.", en: "At a guesthouse or hotel nearby — and come for the sessions and shared activities." }
   currency: "$"
   vat: 18                      # НДС, % — цены с НДС сайт считает сам
-  price_label: { ru: "за номер за ночь", en: "per room per night" }
+  price_label: { ru: "групповой тариф, за номер за ночь", en: "group rate, per room per night" }
   categories:                  # single / double — цена за ночь для одного / двоих без НДС (пусто — «уточняется»); url — страница номера на сайте отеля
     - name: "Standard"
       type: { ru: "King или Twin", en: "King or Twin" }
       text: { ru: "Уютный номер с видом на лес или на горы.", en: "A cosy room facing the forest or the mountains." }
-      url: ""
+      url: "https://roomshotels.com/locations/kazbegi#rooms"
       photo: { src: "room-standard.webp", alt: { ru: "Номер Standard", en: "Standard room" } }
       variants:
         - { name: { ru: "King · вид на лес", en: "King · forest view" }, single: 160, double: 180 }
@@ -315,7 +310,7 @@ rooms:
     - name: "Executive"
       type: { ru: "для долгого проживания", en: "made for longer stays" }
       text: { ru: "Просторнее, ванная из натурального дерева с тропическим душем.", en: "More spacious, with a natural-wood bathroom and a rainfall shower." }
-      url: ""
+      url: "https://roomshotels.com/locations/kazbegi#rooms"
       photo: { src: "room-executive.webp", alt: { ru: "Номер Executive", en: "Executive room" } }
       variants:
         - { name: { ru: "King · вид на лес", en: "King · forest view" }, single: 195, double: 215 }
@@ -323,14 +318,14 @@ rooms:
     - name: "Signature"
       type: { ru: "просторный, с ванной", en: "spacious, with a bathtub" }
       text: { ru: "Большой номер с ванной и видом с террасы.", en: "A large room with a bathtub and a terrace view." }
-      url: ""
+      url: "https://roomshotels.com/locations/kazbegi#rooms"
       photo: { src: "room-signature.webp", alt: { ru: "Номер Signature", en: "Signature room" } }
       variants:
         - { name: { ru: "King · вид на лес", en: "King · forest view" }, single: 290, double: 310 }
         - { name: { ru: "King · вид на горы", en: "King · mountain view" }, single: 305, double: 325 }
-  price_note:
-    ru: "Цены — в долларах, за номер за ночь, завтрак включён: первая цифра — для одного гостя, вторая — для двоих. Официальные ночи ретрита — с {checkin} по {checkout} ({nights} ночей), дополнительные ночи до и после — по тем же ценам."
-    en: "Prices are in US dollars, per room per night, breakfast included: the first figure is for one guest, the second for two. The official retreat nights are {checkin} to {checkout} ({nights} nights); extra nights before and after are at the same rates."
+  price_note:                  # «до 37 %» = группа vs Booking «free cancel», замер 09.10.2026 (01-rooms-venue/public-vs-group-prices); Илья 25.11: брать максимум
+    ru: "Цены в карточках — групповой тариф ретрита, а не цены с сайта отеля: до 37 % ниже открытых цен на те же даты. В долларах, за номер за ночь, завтрак включён: первая цифра — для одного гостя, вторая — для двоих. Официальные ночи ретрита — с {checkin} по {checkout} ({nights} ночей), дополнительные ночи до и после — по тем же ценам."
+    en: "The prices on the cards are the retreat group rate, not the hotel website’s prices — up to 37% below the public prices for the same dates. In US dollars, per room per night, breakfast included: the first figure is for one guest, the second for two. The official retreat nights are {checkin} to {checkout} ({nights} nights); extra nights before and after are at the same rates."
   payment:                     # как платить за проживание — заметным блоком
     ru: "Вы оплачиваете проживание напрямую отелю при заезде. Цены указаны за номер за ночь, завтрак включён, к цене добавляется НДС 18%. Для бронирования номера укажите в анкете категорию и даты. До какого числа номер держится за группой, уточняется. Участие в ретрите оплачивается отдельно, организатору."
     en: "You pay for your stay directly to the hotel at check-in. Prices are per room per night, breakfast included, plus 18% VAT. To have a room held for you, give the category and dates in the application. How long rooms are held for the group is to be confirmed. The retreat fee is paid separately, to the organiser."
@@ -359,7 +354,7 @@ activities:
     - { photo: "strip-2.webp", title: { ru: "Пешие прогулки", en: "Hiking" }, text: { ru: "С проводником от отеля или самостоятельно — например, к церкви Гергети над посёлком.", en: "With a hotel guide or on your own — for example, up to Gergeti Church above the village." } }
     - { photo: "cooking.webp", title: { ru: "Кулинарные мастер-классы", en: "Cooking classes" }, text: { ru: "Приготовим хинкали или хачапури.", en: "We’ll make khinkali or khachapuri." } }
     - { photo: "strip-3.webp", pos: "50% 75%", title: { ru: "Верховая езда", en: "Horse riding" }, text: { ru: "С гидом от отеля — в первозданные природные места.", en: "With a hotel guide — into untouched nature." } }
-    - { photo: "spa.webp", title: { ru: "Спа", en: "Spa" }, text: { ru: "Бассейн, сауны и процедуры в отеле с невероятными видами.", en: "A pool, saunas and treatments at the hotel, with incredible views." } }
+    - { photo: "spa.webp", title: { ru: "Спа", en: "Spa" }, text: { ru: "В отеле: подогреваемый крытый бассейн, сауна, уличная купель, фитнес-зал и массажный кабинет (по записи).", en: "At the hotel: a heated indoor pool, a sauna, an outdoor bath, a gym and a massage room (by appointment)." } }
     - { photo: "offroad.webp", title: { ru: "Офф-роуд", en: "Off-road" }, text: { ru: "По труднодоступным и самым красивым местам.", en: "To the remotest and most beautiful places." } }
     - { photo: "master-session.webp", pos: "62% 30%", title: { ru: "Частное занятие с Мастером", en: "Private session with the Master" }, text: { ru: "При наличии времени и возможности, по предварительной договорённости: {private}.", en: "When time allows, by appointment: {private}." } }
 
@@ -379,7 +374,7 @@ cocreate:
   lead:
     ru: "Участники ретритов — яркие и талантливые люди. В кругу единомышленников особенно хорошо раскрывается ценность творчества и дарения. Если хочется чем-то поделиться — мы с радостью поддержим и поможем с организацией."
     en: "Retreat participants are bright, talented people, and among kindred spirits the value of creativity and giving truly opens up. If you’d like to share something, we’ll gladly support you and help organise it."
-  photo: { src: "cocreate.webp", pos: "50% 30%", alt: { ru: "Улыбка в кругу единомышленников", en: "A smile among kindred spirits" } }
+  photo: { src: "cocreate-meadow.webp", pos: "50% 50%", alt: { ru: "Цветы на горном лугу", en: "Wildflowers on a mountain meadow" } }
   chips:
     - { ru: "Музыка", en: "Music" }
     - { ru: "Вечера у костра", en: "Evenings by the fire" }
@@ -410,11 +405,11 @@ pricing:
   includes:                    # под ценой — что входит
     - { ru: "Групповые практики с Мастером — утром и вечером", en: "Group sessions with the Master — morning and evening" }
     - { ru: "Наставничество", en: "Mentorship" }
-    - { ru: "Йога и breathwork", en: "Yoga and breathwork" }
+    - { ru: "Йога", en: "Yoga" }
     - { ru: "Вечерние костры", en: "Evening bonfires" }
     - { ru: "Одно совместное барбекю", en: "One shared barbecue" }
   list:
-    - { ru: "Оплата в течение 10 дней после подтверждения заявки — криптовалюта или перевод в евро, долларах, рублях", en: "Payment within 10 days of your application being confirmed — crypto or a transfer in euros, dollars or roubles" }
+    - { ru: "Оплата в течение 10 дней после подтверждения заявки: USDT (сеть TRON или TON) или USDC (сеть Ethereum) — основной способ, без доплаты; банковский перевод в евро — без доплаты; в долларах, рублях, другой валюте и через PayPal — с доплатой 10 % от суммы в евро.", en: "Payment within 10 days of your application being confirmed: USDT (TRON or TON network) or USDC (Ethereum network) — the main way, no surcharge; bank transfer in euros — no surcharge; in US dollars, roubles, another currency or via PayPal — with a 10% surcharge on the euro amount." }
     - { ru: "Планируется только вживую, без онлайн-трансляции", en: "Planned in person only, no live stream" }
   fine: { ru: "Проживание — отдельно, напрямую отелю. Массаж и дополнительные активности — за отдельную плату.", en: "Accommodation is separate, paid directly to the hotel. Massage and optional activities are paid separately." }
   stay_hint: { ru: "Проживание в Rooms Kazbegi — от {rooms_from} $ за номер за ночь, плюс НДС 18%. Оплата — отелю при заезде.", en: "Rooms at Rooms Kazbegi — from ${rooms_from} per room per night, plus 18% VAT, paid to the hotel at check-in." }
@@ -447,6 +442,8 @@ pricing:
 
       Срок считается по дню, когда мы получили ваше уведомление. Комиссию банка или сети за возврат оплачиваете вы: она вычитается из суммы возврата.
 
+      Возвращаем ровно ту сумму, что пришла к нам, в той же валюте, в течение 14 дней после получения вашего уведомления.
+
       Если до 1 марта 2027 года наберётся недостаточно участников, ретрит отменяется и все деньги возвращаются полностью.
 
       Если Мастер или кто-то из организаторов не сможет провести ретрит, а также при форс-мажоре стоимость возвращается за вычетом прямых расходов (аренда зала, дорога Мастера и т. д.).
@@ -466,6 +463,8 @@ pricing:
       - from 20 May 2027 — no refund.
 
       The period is counted from the day we receive your notice. The bank or network fee for the refund is paid by you and deducted from the refund.
+
+      We refund exactly the amount we received, in the same currency, within 14 days of receiving your notice.
 
       If there are not enough participants by 1 March 2027, the retreat is cancelled and all payments are refunded in full.
 
@@ -524,11 +523,11 @@ faq:
       - q: { ru: "Как можно оплатить?", en: "How can I pay?" }
         a:
           ru: |
-            **Участие:** криптовалюта или перевод в евро, долларах, рублях — заранее. Реквизиты пришлём после подтверждения заявки.
+            **Участие:** в течение 10 дней после подтверждения заявки. Криптовалюта — USDT (сети TRON или TON) или USDC (сеть Ethereum), без доплаты; банковский перевод в евро — без доплаты; в долларах, рублях, другой валюте и через PayPal — с доплатой 10 % от суммы в евро. Реквизиты пришлём после подтверждения заявки.
 
             **Проживание в Rooms Kazbegi:** напрямую отелю при заезде, к цене добавляется НДС 18%.
           en: |
-            **The retreat:** crypto or a transfer in euros, dollars or roubles — in advance. Payment details are sent once your application is confirmed.
+            **The retreat:** within 10 days of your application being confirmed. Crypto — USDT (TRON or TON network) or USDC (Ethereum network), no surcharge; bank transfer in euros — no surcharge; in US dollars, roubles, another currency or via PayPal — with a 10% surcharge on the euro amount. Payment details are sent once your application is confirmed.
 
             **Your room at Rooms Kazbegi:** directly to the hotel at check-in, plus 18% VAT.
       - q: { ru: "Какие условия частных занятий с Мастером?", en: "What about private sessions with the Master?" }
